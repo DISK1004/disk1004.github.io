@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="人生初のトライアスロン、コスミックレディース＆ビギナーズトライアスロンの結果と振り返り。男子6位で完走。"
+    content="人生初のトライアスロン、コスミックレディース＆ビギナーズトライアスロンの結果と振り返り。男子6位で完走しました。"
   >
 
   <title>
-    人生初トライアスロンで男子6位｜コスミック2025
+    人生初トライアスロン｜コスミック2025
   </title>
 
   <style>
+    :root {
+      --navy: #071b33;
+      --blue: #08667d;
+      --teal: #0b929e;
+      --light: #f2f6f8;
+      --white: #ffffff;
+      --text: #1c2835;
+      --muted: #687686;
+      --border: #dbe5eb;
+      --shadow: 0 9px 28px rgba(9, 35, 57, 0.09);
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -24,13 +41,13 @@
 
     body {
       margin: 0;
-      color: #222b38;
-      background: #f3f5f7;
+      color: var(--text);
+      background: var(--light);
       font-family:
         Arial,
         "Noto Sans JP",
         sans-serif;
-      line-height: 1.8;
+      line-height: 1.75;
     }
 
     a {
@@ -46,65 +63,46 @@
     }
 
     header {
-      position: relative;
-      overflow: hidden;
-      padding: 100px 20px 90px;
+      padding: 85px 20px;
       color: white;
       text-align: center;
       background:
         radial-gradient(
-          circle at 80% 20%,
-          rgba(255,255,255,.18),
-          transparent 28%
+          circle at 85% 15%,
+          rgba(25, 195, 199, 0.28),
+          transparent 30%
         ),
         linear-gradient(
           135deg,
-          #8d1708,
-          #df3518 58%,
-          #ff7a28
+          var(--navy),
+          var(--blue) 65%,
+          var(--teal)
         );
-    }
-
-    header::after {
-      content: "";
-      position: absolute;
-      left: -10%;
-      right: -10%;
-      bottom: -130px;
-      height: 220px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.08);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
     }
 
     .label {
       display: inline-block;
-      margin-bottom: 16px;
+      margin-bottom: 15px;
       padding: 7px 14px;
-      border: 1px solid rgba(255,255,255,.55);
+      border: 1px solid rgba(255, 255, 255, 0.4);
       border-radius: 999px;
-      background: rgba(0,0,0,.12);
+      background: rgba(255, 255, 255, 0.08);
       font-size: 13px;
       font-weight: bold;
-      letter-spacing: .12em;
+      letter-spacing: 0.12em;
     }
 
     header h1 {
       max-width: 850px;
-      margin: 0 auto 16px;
-      font-size: clamp(30px, 7vw, 54px);
-      line-height: 1.2;
-      text-shadow: 0 3px 18px rgba(0,0,0,.28);
+      margin: 0 auto;
+      font-size: clamp(31px, 7vw, 53px);
+      line-height: 1.25;
     }
 
     header p {
-      margin: 0;
-      font-size: clamp(15px, 3vw, 20px);
-      text-shadow: 0 2px 8px rgba(0,0,0,.25);
+      margin: 16px 0 0;
+      color: #dcecf4;
+      font-size: 17px;
     }
 
     nav {
@@ -114,52 +112,49 @@
       padding: 13px 8px;
       text-align: center;
       background: white;
-      box-shadow: 0 3px 14px rgba(40,20,10,.1);
+      box-shadow: 0 3px 14px rgba(20, 45, 70, 0.1);
     }
 
     nav a {
       display: inline-block;
-      margin: 5px 9px;
-      color: #c53118;
+      margin: 5px 10px;
+      color: var(--blue);
       font-size: 14px;
       font-weight: bold;
       text-decoration: none;
     }
 
     main {
-      padding: 32px 0 70px;
+      padding: 40px 0 75px;
     }
 
     section {
       margin-bottom: 26px;
-      padding: 26px;
-      border: 1px solid #e1e5e9;
+      padding: 27px;
+      border: 1px solid var(--border);
       border-radius: 20px;
-      background: white;
-      box-shadow: 0 8px 28px rgba(38,28,20,.08);
+      background: var(--white);
+      box-shadow: var(--shadow);
     }
 
     h2 {
       margin-top: 0;
-      padding-left: 13px;
-      color: #a52614;
-      border-left: 6px solid #e54121;
+      padding-left: 12px;
+      color: var(--navy);
+      border-left: 6px solid var(--teal);
       line-height: 1.4;
     }
 
     h3 {
-      color: #a52614;
-    }
-
-    .intro {
-      font-size: 17px;
+      color: var(--blue);
     }
 
     .lead {
       margin: 0;
       padding: 22px;
       border-radius: 15px;
-      background: #fff4ef;
+      background: #eaf6f8;
+      font-size: 17px;
       font-weight: bold;
     }
 
@@ -173,19 +168,19 @@
       padding: 20px 14px;
       text-align: center;
       border-radius: 15px;
-      background: #fff1ec;
+      background: #eef8f9;
     }
 
     .info-card span {
       display: block;
-      color: #756861;
+      color: var(--muted);
       font-size: 13px;
     }
 
     .info-card strong {
       display: block;
       margin-top: 5px;
-      color: #a52614;
+      color: var(--blue);
       font-size: 20px;
     }
 
@@ -199,9 +194,9 @@
     .distance-card {
       padding: 20px 12px;
       text-align: center;
-      border: 1px solid #efd9d0;
+      border: 1px solid var(--border);
       border-radius: 15px;
-      background: #fffdfc;
+      background: #fbfdfe;
     }
 
     .distance-card .icon {
@@ -210,12 +205,11 @@
 
     .distance-card strong {
       display: block;
-      color: #c53118;
+      color: var(--blue);
       font-size: 18px;
     }
 
     .main-result {
-      margin-top: 20px;
       padding: 30px 18px;
       color: white;
       text-align: center;
@@ -223,20 +217,20 @@
       background:
         linear-gradient(
           135deg,
-          #9d1d0c,
-          #e84422
+          var(--navy),
+          var(--blue)
         );
     }
 
     .main-result span {
       display: block;
       font-size: 14px;
-      opacity: .92;
+      opacity: 0.92;
     }
 
     .main-result strong {
       display: block;
-      margin-top: 4px;
+      margin-top: 5px;
       font-size: clamp(38px, 9vw, 60px);
       line-height: 1.2;
     }
@@ -251,48 +245,48 @@
     .ranking-card {
       padding: 22px 12px;
       text-align: center;
-      border: 1px solid #ead9d2;
+      border: 1px solid var(--border);
       border-radius: 15px;
-      background: #fffdfc;
+      background: #f8fbfc;
     }
 
     .ranking-card span {
       display: block;
-      color: #72665f;
+      color: var(--muted);
       font-size: 13px;
     }
 
     .ranking-card strong {
       display: block;
-      color: #c53118;
+      color: var(--blue);
       font-size: 30px;
     }
 
     .table-wrap {
       overflow-x: auto;
-      margin-top: 20px;
+      margin-top: 21px;
     }
 
     table {
       width: 100%;
-      min-width: 590px;
+      min-width: 570px;
       border-collapse: collapse;
     }
 
     th,
     td {
       padding: 14px 11px;
-      border-bottom: 1px solid #e1e5e8;
+      border-bottom: 1px solid var(--border);
     }
 
     th {
       color: white;
       text-align: left;
-      background: #c53118;
+      background: var(--blue);
     }
 
     tr:nth-child(even) {
-      background: #fff5f1;
+      background: #f0f8f9;
     }
 
     td:nth-child(2),
@@ -300,64 +294,626 @@
       font-weight: bold;
     }
 
-    .story-box {
+    .review-box {
       margin-top: 18px;
       padding: 21px;
-      border-left: 6px solid #df4524;
+      border-left: 6px solid var(--teal);
       border-radius: 13px;
-      background: #fff7f3;
+      background: #f2f9fa;
     }
 
-    .story-box h3 {
+    .review-box h3 {
       margin-top: 0;
     }
 
     .weak {
-      border-left-color: #d94040;
-      background: #fff3f3;
+      border-left-color: #d95858;
+      background: #fff4f4;
     }
 
     .strong {
-      border-left-color: #169b54;
-      background: #f0faf4;
+      border-left-color: #23a261;
+      background: #f1faf5;
     }
 
-    .pattern {
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .flow-card {
+      padding: 18px 10px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #f8fbfc;
+    }
+
+    .flow-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .flow-card strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--blue);
+      font-size: 21px;
+    }
+
+    .summary {
       padding: 25px;
       color: white;
       border-radius: 17px;
       background:
         linear-gradient(
           135deg,
-          #292929,
-          #8f2011
+          var(--navy),
+          var(--blue)
         );
     }
 
-    .pattern h3 {
+    .summary h3 {
       margin-top: 0;
       color: white;
     }
 
-    .flow {
-      display: grid;
-      grid-template-columns:
-        repeat(4, 1fr);
+    .summary p:last-child {
+      margin-bottom: 0;
+    }
+
+    .note {
+      padding: 20px;
+      border: 2px dashed #b9cbd5;
+      border-radius: 14px;
+      color: #566674;
+      background: #f8fbfc;
+    }
+
+    .button-area {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 12px;
-      margin-top: 18px;
+      margin-top: 33px;
     }
 
-    .flow-card {
-      padding: 17px 10px;
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      color: white;
+      border-radius: 11px;
+      background: var(--teal);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      color: var(--blue);
+      border: 1px solid var(--blue);
+      background: white;
+    }
+
+    footer {
+      padding: 38px 15px;
+      color: white;
       text-align: center;
-      border-radius: 13px;
-      background: rgba(255,255,255,.12);
+      background: var(--navy);
     }
 
-    .flow-card span {
-      display: block;
-      font-size: 12px;
-      opacity: .82;
+    footer p {
+      margin: 0;
     }
 
-    .flow
+    @media (max-width: 700px) {
+      header {
+        padding: 67px 17px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      .info-grid,
+      .distance-grid,
+      .ranking-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="label">
+      FIRST TRIATHLON
+    </div>
+
+    <h1>
+      人生初のトライアスロンで男子6位
+    </h1>
+
+    <p>
+      コスミックレディース＆ビギナーズトライアスロン
+    </p>
+
+  </header>
+
+  <nav>
+
+    <a href="#overview">
+      大会概要
+    </a>
+
+    <a href="#result">
+      結果
+    </a>
+
+    <a href="#review">
+      振り返り
+    </a>
+
+    <a href="races.html">
+      レース一覧
+    </a>
+
+  </nav>
+
+  <main>
+
+    <div class="container">
+
+      <section>
+
+        <p class="lead">
+          人生初のトライアスロンは、
+          スイム37位からバイク4位、ラン4位まで追い上げ、
+          男子6位でフィニッシュしました。
+        </p>
+
+      </section>
+
+      <section id="overview">
+
+        <h2>
+          大会概要
+        </h2>
+
+        <div class="info-grid">
+
+          <div class="info-card">
+
+            <span>
+              開催年
+            </span>
+
+            <strong>
+              2025年
+            </strong>
+
+          </div>
+
+          <div class="info-card">
+
+            <span>
+              開催地
+            </span>
+
+            <strong>
+              大阪府岬町
+            </strong>
+
+          </div>
+
+          <div class="info-card">
+
+            <span>
+              ゼッケン
+            </span>
+
+            <strong>
+              48
+            </strong>
+
+          </div>
+
+        </div>
+
+        <div class="distance-grid">
+
+          <div class="distance-card">
+
+            <div class="icon">
+              🏊
+            </div>
+
+            <strong>
+              Swim 0.75km
+            </strong>
+
+          </div>
+
+          <div class="distance-card">
+
+            <div class="icon">
+              🚴
+            </div>
+
+            <strong>
+              Bike 20km
+            </strong>
+
+          </div>
+
+          <div class="distance-card">
+
+            <div class="icon">
+              🏃
+            </div>
+
+            <strong>
+              Run 5km
+            </strong>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="result">
+
+        <h2>
+          レース結果
+        </h2>
+
+        <div class="main-result">
+
+          <span>
+            総合タイム
+          </span>
+
+          <strong>
+            1:23:05
+          </strong>
+
+        </div>
+
+        <div class="ranking-grid">
+
+          <div class="ranking-card">
+
+            <span>
+              男子順位
+            </span>
+
+            <strong>
+              6位
+            </strong>
+
+          </div>
+
+          <div class="ranking-card">
+
+            <span>
+              ゼッケン
+            </span>
+
+            <strong>
+              48
+            </strong>
+
+          </div>
+
+        </div>
+
+        <div class="table-wrap">
+
+          <table>
+
+            <thead>
+              <tr>
+                <th>
+                  セクション
+                </th>
+
+                <th>
+                  区間タイム
+                </th>
+
+                <th>
+                  区間順位
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>
+                  🏊 スイム 0.75km
+                </td>
+
+                <td>
+                  17:35.8
+                </td>
+
+                <td>
+                  37位
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  🚴 バイク区間
+                </td>
+
+                <td>
+                  43:11.1
+                </td>
+
+                <td>
+                  4位
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  🏃 ラン区間
+                </td>
+
+                <td>
+                  22:18.6
+                </td>
+
+                <td>
+                  4位
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+        <div class="note">
+
+          公式リザルトでは、
+          T1とT2が独立したタイムとして掲載されていないため、
+          公式表と同じ区間表示にしています。
+
+        </div>
+
+      </section>
+
+      <section id="review">
+
+        <h2>
+          レース振り返り
+        </h2>
+
+        <div class="review-box weak">
+
+          <h3>
+            🏊 スイム
+          </h3>
+
+          <p>
+            750mを17分35秒8、区間37位。
+            100m平均は約2分21秒でした。
+          </p>
+
+          <p>
+            人生初のレースでも、
+            スイムで後方からスタートする展開になりました。
+            この時点ですでに、
+            スイム強化が総合タイム短縮の重要課題として
+            表れていました。
+          </p>
+
+        </div>
+
+        <div class="review-box strong">
+
+          <h3>
+            🚴 バイク
+          </h3>
+
+          <p>
+            バイク区間は43分11秒1、区間4位。
+            スイム37位から大きく順位を戻しました。
+          </p>
+
+          <p>
+            初めてのトライアスロンでも、
+            バイクで上位の区間順位を出せたことは、
+            大きな手応えになりました。
+          </p>
+
+        </div>
+
+        <div class="review-box strong">
+
+          <h3>
+            🏃 ラン
+          </h3>
+
+          <p>
+            ラン区間は22分18秒6、区間4位。
+            バイクに続いて上位のタイムを記録しました。
+          </p>
+
+          <p>
+            陸上競技で培った走力を、
+            初めてのトライアスロンでも
+            発揮できたレースでした。
+          </p>
+
+        </div>
+
+      </section>
+
+      <section>
+
+        <h2>
+          順位の変化
+        </h2>
+
+        <div class="flow">
+
+          <div class="flow-card">
+
+            <span>
+              スイム
+            </span>
+
+            <strong>
+              37位
+            </strong>
+
+          </div>
+
+          <div class="flow-card">
+
+            <span>
+              バイク
+            </span>
+
+            <strong>
+              4位
+            </strong>
+
+          </div>
+
+          <div class="flow-card">
+
+            <span>
+              ラン
+            </span>
+
+            <strong>
+              4位
+            </strong>
+
+          </div>
+
+          <div class="flow-card">
+
+            <span>
+              最終順位
+            </span>
+
+            <strong>
+              男子6位
+            </strong>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section>
+
+        <h2>
+          総評
+        </h2>
+
+        <div class="summary">
+
+          <h3>
+            人生初レースで得た手応え
+          </h3>
+
+          <p>
+            人生初のトライアスロンは、
+            男子6位という好結果で終えることができました。
+          </p>
+
+          <p>
+            バイクとランでは区間4位に入り、
+            スイムで遅れても後半で追い上げられることを
+            確認できました。
+          </p>
+
+          <p>
+            一方で、スイム37位という結果から、
+            総合力をさらに高めるためには
+            スイム改善が必要だと分かりました。
+          </p>
+
+          <p>
+            この大会が、
+            オリンピックディスタンス2時間30分切りを目指す
+            挑戦の出発点になりました。
+          </p>
+
+        </div>
+
+      </section>
+
+      <section>
+
+        <h2>
+          本人のレースメモ
+        </h2>
+
+        <div class="note">
+
+          <p>
+            女性またはビギナー限定ということもあり上位でフィニッシュすることができた。カナヅチからのトライアスロン初完走ということもありフィニッシュ時はかなり嬉しかった。
+          </p>
+
+        </div>
+
+      </section>
+
+      <div class="button-area">
+
+        <a
+          class="button"
+          href="races.html"
+        >
+          ← レース一覧へ戻る
+        </a>
+
+        <a
+          class="button secondary"
+          href="index.html"
+        >
+          トップページへ
+        </a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+
+    <p>
+      © 2026 薬剤師トライアスリートへの道
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
