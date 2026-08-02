@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="人生初のトライアスロン、コスミックレディース＆ビギナーズトライアスロンの結果と振り返り。男子6位で完走。"
+  >
+
+  <title>
+    人生初トライアスロンで男子6位｜コスミック2025
+  </title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: #222b38;
+      background: #f3f5f7;
+      font-family:
+        Arial,
+        "Noto Sans JP",
+        sans-serif;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(
+        1000px,
+        calc(100% - 28px)
+      );
+      margin: 0 auto;
+    }
+
+    header {
+      position: relative;
+      overflow: hidden;
+      padding: 100px 20px 90px;
+      color: white;
+      text-align: center;
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(255,255,255,.18),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #8d1708,
+          #df3518 58%,
+          #ff7a28
+        );
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      left: -10%;
+      right: -10%;
+      bottom: -130px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 7px 14px;
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 999px;
+      background: rgba(0,0,0,.12);
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: .12em;
+    }
+
+    header h1 {
+      max-width: 850px;
+      margin: 0 auto 16px;
+      font-size: clamp(30px, 7vw, 54px);
+      line-height: 1.2;
+      text-shadow: 0 3px 18px rgba(0,0,0,.28);
+    }
+
+    header p {
+      margin: 0;
+      font-size: clamp(15px, 3vw, 20px);
+      text-shadow: 0 2px 8px rgba(0,0,0,.25);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      padding: 13px 8px;
+      text-align: center;
+      background: white;
+      box-shadow: 0 3px 14px rgba(40,20,10,.1);
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 5px 9px;
+      color: #c53118;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 32px 0 70px;
+    }
+
+    section {
+      margin-bottom: 26px;
+      padding: 26px;
+      border: 1px solid #e1e5e9;
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 8px 28px rgba(38,28,20,.08);
+    }
+
+    h2 {
+      margin-top: 0;
+      padding-left: 13px;
+      color: #a52614;
+      border-left: 6px solid #e54121;
+      line-height: 1.4;
+    }
+
+    h3 {
+      color: #a52614;
+    }
+
+    .intro {
+      font-size: 17px;
+    }
+
+    .lead {
+      margin: 0;
+      padding: 22px;
+      border-radius: 15px;
+      background: #fff4ef;
+      font-weight: bold;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .info-card {
+      padding: 20px 14px;
+      text-align: center;
+      border-radius: 15px;
+      background: #fff1ec;
+    }
+
+    .info-card span {
+      display: block;
+      color: #756861;
+      font-size: 13px;
+    }
+
+    .info-card strong {
+      display: block;
+      margin-top: 5px;
+      color: #a52614;
+      font-size: 20px;
+    }
+
+    .distance-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .distance-card {
+      padding: 20px 12px;
+      text-align: center;
+      border: 1px solid #efd9d0;
+      border-radius: 15px;
+      background: #fffdfc;
+    }
+
+    .distance-card .icon {
+      font-size: 31px;
+    }
+
+    .distance-card strong {
+      display: block;
+      color: #c53118;
+      font-size: 18px;
+    }
+
+    .main-result {
+      margin-top: 20px;
+      padding: 30px 18px;
+      color: white;
+      text-align: center;
+      border-radius: 18px;
+      background:
+        linear-gradient(
+          135deg,
+          #9d1d0c,
+          #e84422
+        );
+    }
+
+    .main-result span {
+      display: block;
+      font-size: 14px;
+      opacity: .92;
+    }
+
+    .main-result strong {
+      display: block;
+      margin-top: 4px;
+      font-size: clamp(38px, 9vw, 60px);
+      line-height: 1.2;
+    }
+
+    .ranking-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .ranking-card {
+      padding: 22px 12px;
+      text-align: center;
+      border: 1px solid #ead9d2;
+      border-radius: 15px;
+      background: #fffdfc;
+    }
+
+    .ranking-card span {
+      display: block;
+      color: #72665f;
+      font-size: 13px;
+    }
+
+    .ranking-card strong {
+      display: block;
+      color: #c53118;
+      font-size: 30px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 20px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 590px;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 14px 11px;
+      border-bottom: 1px solid #e1e5e8;
+    }
+
+    th {
+      color: white;
+      text-align: left;
+      background: #c53118;
+    }
+
+    tr:nth-child(even) {
+      background: #fff5f1;
+    }
+
+    td:nth-child(2),
+    td:nth-child(3) {
+      font-weight: bold;
+    }
+
+    .story-box {
+      margin-top: 18px;
+      padding: 21px;
+      border-left: 6px solid #df4524;
+      border-radius: 13px;
+      background: #fff7f3;
+    }
+
+    .story-box h3 {
+      margin-top: 0;
+    }
+
+    .weak {
+      border-left-color: #d94040;
+      background: #fff3f3;
+    }
+
+    .strong {
+      border-left-color: #169b54;
+      background: #f0faf4;
+    }
+
+    .pattern {
+      padding: 25px;
+      color: white;
+      border-radius: 17px;
+      background:
+        linear-gradient(
+          135deg,
+          #292929,
+          #8f2011
+        );
+    }
+
+    .pattern h3 {
+      margin-top: 0;
+      color: white;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns:
+        repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .flow-card {
+      padding: 17px 10px;
+      text-align: center;
+      border-radius: 13px;
+      background: rgba(255,255,255,.12);
+    }
+
+    .flow-card span {
+      display: block;
+      font-size: 12px;
+      opacity: .82;
+    }
+
+    .flow
