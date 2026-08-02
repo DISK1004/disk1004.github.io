@@ -2,190 +2,407 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>薬剤師トライアスリートへの道</title>
 
+<meta name="description"
+content="薬剤師として働きながらトライアスロンに挑戦。オリンピックディスタンス2時間30分切りを目指す成長記録。">
+
 <style>
-body{
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
 font-family:Arial,sans-serif;
-background:#f4f6f8;
-color:#222;
-line-height:1.7;
+background:#f5f8fb;
+color:#333;
+line-height:1.8;
 }
 
 header{
-background:linear-gradient(135deg,#071b33,#087f8c);
-color:white;
-padding:60px 20px;
+
+background:url("1783235429691.jpg") center/cover;
+
+height:70vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+}
+
+header::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.45);
+
+}
+
+.hero{
+
+position:relative;
+
 text-align:center;
+
+color:white;
+
 }
 
-header h1{
-margin:0;
-font-size:42px;
+.hero h1{
+
+font-size:50px;
+
+margin-bottom:15px;
+
 }
 
-header p{
+.hero p{
+
 font-size:20px;
-opacity:0.9;
+
 }
 
 nav{
+
 background:white;
-padding:15px;
-text-align:center;
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
 box-shadow:0 2px 10px rgba(0,0,0,.1);
-position:sticky;
-top:0;
+
 }
 
 nav a{
-margin:0 15px;
+
+padding:20px;
+
 text-decoration:none;
-color:#087f8c;
+
 font-weight:bold;
+
+color:#005f7a;
+
+}
+
+nav a:hover{
+
+background:#eaf7fb;
+
 }
 
 main{
-max-width:1000px;
+
+max-width:1100px;
+
 margin:auto;
-padding:30px 15px;
+
+padding:40px 20px;
+
 }
 
 section{
-background:white;
-padding:25px;
-margin-bottom:25px;
-border-radius:15px;
-box-shadow:0 3px 10px rgba(0,0,0,.1);
+
+margin-bottom:50px;
+
 }
 
 h2{
-color:#087f8c;
-margin-top:0;
-}
 
-.goal{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
+margin-bottom:20px;
+
+border-left:6px solid #0088aa;
+
+padding-left:10px;
+
 }
 
 .card{
-background:#eef7fb;
-padding:20px;
-border-radius:12px;
+
+background:white;
+
+padding:25px;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+margin-bottom:20px;
+
 }
 
-.card h3{
-margin-top:0;
+.button{
+
+display:inline-block;
+
+margin-top:15px;
+
+padding:12px 24px;
+
+background:#0088aa;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:8px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:20px;
+
 }
 
 footer{
-background:#071b33;
+
+background:#0b2239;
+
 color:white;
+
 text-align:center;
+
 padding:30px;
+
+margin-top:50px;
+
 }
+
 </style>
+
 </head>
 
 <body>
 
 <header>
+
+<div class="hero">
+
 <h1>薬剤師トライアスリートへの道</h1>
-<p>オリンピックディスタンス サブ2時間30分への挑戦</p>
+
+<p>
+
+仕事と競技を両立しながら<br>
+
+オリンピックディスタンス
+
+サブ2時間30分を目指す記録
+
+</p>
+
+</div>
+
 </header>
 
 <nav>
-<a href="#goal">目標</a>
-<a href="training.html">練習日記</a>
-<a href="races.html">レース結果</a>
-<a href="#bike">機材</a>
-<a href="#profile">プロフィール</a>
+
+<a href="profile.html">プロフィール</a>
+
+<a href="races.html">出場大会</a>
+
+<a href="training.html">トレーニング</a>
+
+<a href="#">機材紹介</a>
+
 </nav>
 
 <main>
 
-<section id="goal">
-<h2>現在の目標</h2>
+<section>
 
-<div class="goal">
-
-<div class="card">
-<h3>🏊 スイム</h3>
-<p>1500m<br><b>33〜35分</b></p>
-</div>
+<h2>このサイトについて</h2>
 
 <div class="card">
-<h3>🚴 バイク</h3>
-<p>40km<br><b>1時間10〜12分</b></p>
+
+<p>
+
+滋賀県在住の薬剤師。
+
+学生時代は陸上競技に取り組み、
+
+現在はトライアスロンへ挑戦しています。
+
+</p>
+
+<p>
+
+スイムが苦手だからこそ、
+
+どう成長していくのかを
+
+リアルに発信していきます。
+
+</p>
+
+<a class="button"
+
+href="profile.html">
+
+プロフィールを見る
+
+</a>
+
 </div>
 
-<div class="card">
-<h3>🏃 ラン</h3>
-<p>10km<br><b>39〜40分</b></p>
-</div>
-
-<div class="card">
-<h3>⚡ FTP</h3>
-<p><b>240W → 250W</b></p>
-</div>
-
-</div>
 </section>
-<section id="training">
-<h2>最新の練習記録</h2>
 
-<h3>2026年8月2日</h3>
+<section>
+
+<h2>最新レース</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>伊勢志摩・里海トライアスロン2026</h3>
+
+<p>
+
+オリンピックディスタンスに挑戦。
+
+</p>
+
+<a class="button"
+
+href="iseshima2026.html">
+
+詳しく見る
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>愛南町いやしの郷トライアスロン2026</h3>
+
+<p>
+
+初めてのロング寄りのレース。
+
+</p>
+
+<a class="button"
+
+href="ainan2026.html">
+
+詳しく見る
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>レイクビワトライアスロン2025</h3>
+
+<p>
+
+初めてのロングディスタンスレース。
+
+</p>
+
+<a class="button"
+
+href="lakebiwa2025.html">
+
+詳しく見る
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>人生初トライアスロン2025</h3>
+
+<p>
+
+男子6位でフィニッシュ。
+
+</p>
+
+<a class="button"
+
+href="cosmic2025.html">
+
+詳しく見る
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>目標</h2>
+
+<div class="card">
 
 <ul>
-<li>🚴 リカバリーバイク 25分23秒</li>
-<li>平均パワー：148W</li>
-<li>平均心拍：116bpm</li>
-<li>NP：154W</li>
-<li>TSS：20.9</li>
-<li>トレーニング効果：有酸素2.1（リカバリー）</li>
+
+<li>オリンピックディスタンス サブ2時間30分</li>
+
+<li>スイム1500m 33〜35分</li>
+
+<li>FTP240W→250W</li>
+
+<li>ラン10km 39〜40分</li>
+
 </ul>
 
-<p>
-スイム強化を最優先に、
-オリンピックディスタンスサブ2時間30分を目標として
-トレーニングしています。
-</p>
+</div>
 
 </section>
 
-<section id="bike">
+<section>
 
-<h2>使用機材</h2>
+<h2>更新予定</h2>
+
+<div class="card">
 
 <ul>
-<li>MERIDA REACTO 6000</li>
-<li>MAVIC COSMIC SL45</li>
-<li>OGK Kabuto AERO-R2</li>
-<li>Garmin Edge 840 Solar</li>
-<li>Garmin Forerunner 255</li>
-<li>Zwift</li>
+
+<li>日々のトレーニング</li>
+
+<li>大会レポート</li>
+
+<li>Garminデータ分析</li>
+
+<li>機材レビュー</li>
+
+<li>Zwift練習</li>
+
+<li>薬剤師目線のコンディショニング</li>
+
 </ul>
 
-</section>
-
-<section id="profile">
-
-<h2>プロフィール</h2>
-
-<p>
-薬剤師として働きながら、
-トライアスロンでオリンピックディスタンス
-サブ2時間30分を目指しています。
-</p>
-
-<p>
-このブログでは、
-日々の練習・レース・機材レビュー・薬剤師としての知識などを発信しています。
-</p>
+</div>
 
 </section>
 
@@ -193,12 +410,14 @@ padding:30px;
 
 <footer>
 
-<h3>薬剤師トライアスリートへの道</h3>
-
 <p>
-© 2026 DISK1004
+
+©2026 薬剤師トライアスリートへの道
+
 </p>
 
 </footer>
 
 </body>
+
+</html>
