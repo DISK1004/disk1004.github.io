@@ -1,0 +1,16 @@
+title: 薬剤師トライアスリートへの道
+description: ODサブ2時間30分を目指す薬剤師トライアスリートの記録
+lang: ja
+timezone: Asia/Tokyo
+
+url: "https://disk1004.github.io"
+baseurl: ""
+
+permalink: /training/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: training-post
