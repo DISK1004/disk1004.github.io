@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="滋賀県在住の薬剤師トライアスリートのプロフィール。元中長距離ランナーがオリンピックディスタンス2時間30分切りを目指します。"
+  >
+
+  <title>
+    プロフィール｜薬剤師トライアスリートへの道
+  </title>
+
+  <style>
+    :root {
+      --navy: #071b33;
+      --blue: #08667d;
+      --teal: #0b929e;
+      --light: #f2f6f8;
+      --white: #ffffff;
+      --text: #1c2835;
+      --muted: #687686;
+      --border: #dbe5eb;
+      --shadow: 0 9px 28px rgba(9, 35, 57, 0.09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--light);
+      font-family:
+        Arial,
+        "Noto Sans JP",
+        sans-serif;
+      line-height: 1.8;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(
+        1000px,
+        calc(100% - 28px)
+      );
+      margin: 0 auto;
+    }
+
+    header {
+      position: relative;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+      color: white;
+      text-align: center;
+      background:
+        linear-gradient(
+          rgba(4, 25, 48, 0.48),
+          rgba(4, 54, 76, 0.66)
+        ),
+        url("1783235429691.jpg")
+        center 34% / cover;
+    }
+
+    .hero-content {
+      max-width: 830px;
+      padding: 34px 26px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 24px;
+      background: rgba(3, 26, 48, 0.44);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 14px 45px rgba(0,0,0,.24);
+    }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 7px 14px;
+      border: 1px solid rgba(255,255,255,.52);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: .13em;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(32px, 7vw, 56px);
+      line-height: 1.25;
+      text-shadow: 0 3px 18px rgba(0,0,0,.38);
+    }
+
+    header p {
+      margin: 18px 0 0;
+      font-size: clamp(16px, 3vw, 21px);
+      text-shadow: 0 2px 10px rgba(0,0,0,.4);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      padding: 13px 8px;
+      text-align: center;
+      background: white;
+      box-shadow: 0 3px 14px rgba(20,45,70,.1);
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 5px 10px;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 40px 0 75px;
+    }
+
+    section {
+      margin-bottom: 26px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin-top: 0;
+      padding-left: 13px;
+      color: var(--navy);
+      border-left: 6px solid var(--teal);
+      line-height: 1.4;
+    }
+
+    h3 {
+      color: var(--blue);
+    }
+
+    .lead {
+      margin: 0;
+      padding: 23px;
+      border-radius: 15px;
+      background: #eaf6f8;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .profile-item {
+      padding: 19px 16px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #f8fbfc;
+    }
+
+    .profile-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .profile-item strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--blue);
+      font-size: 19px;
+    }
+
+    .pb-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .pb-card {
+      padding: 21px 12px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: #f8fbfc;
+    }
+
+    .pb-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .pb-card strong {
+      display: block;
+      margin-top: 6px;
+      color: var(--blue);
+      font-size: 23px;
+    }
+
+    .goal-main {
+      padding: 30px 22px;
+      color: white;
+      text-align: center;
+      border-radius: 18px;
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy),
+          var(--blue)
+        );
+    }
+
+    .goal-main span {
+      display: block;
+      font-size: 14px;
+      opacity: .9;
+    }
+
+    .goal-main strong {
+      display: block;
+      margin-top: 5px;
+      font-size: clamp(34px, 8vw, 54px);
+      line-height: 1.25;
+    }
+
+    .goal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .goal-card {
+      padding: 20px 12px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: #f8fbfc;
+    }
+
+    .goal-card .icon {
+      font-size: 28px;
+    }
+
+    .goal-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .goal-card strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--blue);
+      font-size: 18px;
+    }
+
+    .bike-photo {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      background: #f8fbfc;
+    }
+
+    .bike-photo img {
+      width: 100%;
+      max-height: 720px;
+      object-fit: contain;
+      background: #dfeaf0;
+    }
+
+    .bike-photo figcaption {
+      padding: 15px 17px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .equipment-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .equipment-card {
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: #f8fbfc;
+    }
+
+    .equipment-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .equipment-card strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--blue);
+      font-size: 18px;
+    }
+
+    .history-box {
+      margin-top: 17px;
+      padding: 21px;
+      border-left: 6px solid var(--teal);
+      border-radius: 13px;
+      background: #f1f9fa;
+    }
+
+    .history-box h3 {
+      margin-top: 0;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .content-card {
+      padding: 21px 16px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: #f8fbfc;
+    }
+
+    .content-card .icon {
+      font-size: 30px;
+    }
+
+    .content-card strong {
+      display: block;
+      margin-top: 7px;
+      color: var(--blue);
+    }
+
+    .message {
+      padding: 27px;
+      color: white;
+      border-radius: 18px;
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy),
+          var(--blue)
+        );
+    }
+
+    .message h3 {
+      margin-top: 0;
+      color: white;
+    }
+
+    .message p:last-child {
+      margin-bottom: 0;
+    }
+
+    .button-area {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      color: white;
+      border-radius: 11px;
+      background: var(--teal);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      color: var(--blue);
+      border: 1px solid var(--blue);
+      background: white;
+    }
+
+    footer {
+      padding: 38px 15px;
+      color: white;
+      text-align: center;
+      background: var(--navy);
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 760px) {
+      header {
+        min-height: 560px;
+        padding: 55px 16px;
+        background-position: 48% center;
+      }
+
+      .hero-content {
+        padding: 25px 18px;
+      }
+
+      section {
+        padding: 21px;
+      }
+
+      .profile-grid,
+      .pb-grid,
+      .goal-grid,
+      .equipment-grid,
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="hero-content">
+
+      <div class="label">
+        PROFILE
+      </div>
+
+      <h1>
+        薬剤師トライアスリートへの道
+      </h1>
+
+      <p>
+        仕事も、競技も、本気で。<br>
+        オリンピックディスタンス
+        2時間30分切りを目指して挑戦中。
+      </p>
+
+    </div>
+
+  </header>
+
+  <nav>
+
+    <a href="#about">
+      自己紹介
+    </a>
+
+    <a href="#career">
+      競技歴
+    </a>
+
+    <a href="#goal">
+      目標
+    </a>
+
+    <a href="#bike">
+      愛車
+    </a>
+
+    <a href="races.html">
+      レース結果
+    </a>
+
+  </nav>
+
+  <main>
+
+    <div class="container">
+
+      <section id="about">
+
+        <h2>
+          自己紹介
+        </h2>
+
+        <p class="lead">
+          滋賀県在住の薬剤師です。
+          学生時代は陸上競技の中長距離に取り組み、
+          現在は仕事と両立しながら
+          トライアスロンに挑戦しています。
+        </p>
+
+        <p>
+          ランニングは得意でしたが、
+          トライアスロンを始めてからは
+          スイムが最大の課題になりました。
+        </p>
+
+        <p>
+          苦手なスイムを克服しながら、
+          バイクを強化し、
+          得意なランを活かして
+          オリンピックディスタンス
+          2時間30分切りを目指しています。
+        </p>
+
+        <div class="profile-grid">
+
+          <div class="profile-item">
+            <span>
+              職業
+            </span>
+            <strong>
+              薬剤師
+            </strong>
+          </div>
+
+          <div class="profile-item">
+            <span>
+              居住地
+            </span>
+            <strong>
+              滋賀県
+            </strong>
+          </div>
+
+          <div class="profile-item">
+            <span>
+              得意種目
+            </span>
+            <strong>
+              ラン
+            </strong>
+          </div>
+
+          <div class="profile-item">
+            <span>
+              現在の重点種目
+            </span>
+            <strong>
+              スイム
+            </strong>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="career">
+
+        <h2>
+          陸上競技歴
+        </h2>
+
+        <p>
+          学生時代は中長距離を専門としていました。
+          現在もランはトライアスロンで最も得意な種目です。
+        </p>
+
+        <div class="pb-grid">
+
+          <div class="pb-card">
+            <span>
+              1500m
+            </span>
+            <strong>
+              4分09秒
+            </strong>
+          </div>
+
+          <div class="pb-card">
+            <span>
+              5000m
+            </span>
+            <strong>
+              15分30秒
+            </strong>
+          </div>
+
+          <div class="pb-card">
+            <span>
+              ハーフマラソン
+            </span>
+            <strong>
+              69分
+            </strong>
+          </div>
+
+          <div class="pb-card">
+            <span>
+              フルマラソン
+            </span>
+            <strong>
+              2時間50分
+            </strong>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section>
+
+        <h2>
+          トライアスロン歴
+        </h2>
+
+        <div class="history-box">
+
+          <h3>
+            2025年に初レース
+          </h3>
+
+          <p>
+            人生初のトライアスロンでは、
+            スイムで出遅れながらも、
+            バイクとランで追い上げ、
+            男子6位でフィニッシュしました。
+          </p>
+
+        </div>
+
+        <div class="history-box">
+
+          <h3>
+            長距離・ODへ挑戦
+          </h3>
+
+          <p>
+            レイクビワトライアスロン、
+            愛南町いやしの郷トライアスロン、
+            伊勢志摩・里海トライアスロンなどに出場。
+          </p>
+
+          <p>
+            レースを重ねる中で、
+            スイム強化とバイクの巡航力向上が
+            重要な課題だと分かりました。
+          </p>
+
+        </div>
+
+      </section>
+
+      <section id="goal">
+
+        <h2>
+          現在の目標
+        </h2>
+
+        <div class="goal-main">
+
+          <span>
+            OLYMPIC DISTANCE
+          </span>
+
+          <strong>
+            サブ2時間30分
+          </strong>
+
+        </div>
+
+        <div class="goal-grid">
+
+          <div class="goal-card">
+            <div class="icon">
+              🏊
+            </div>
+            <span>
+              Swim 1500m
+            </span>
+            <strong>
+              33〜35分
+            </strong>
+          </div>
+
+          <div class="goal-card">
+            <div class="icon">
+              🚴
+            </div>
+            <span>
+              Bike 40km
+            </span>
+            <strong>
+              1時間10〜12分
+            </strong>
+          </div>
+
+          <div class="goal-card">
+            <div class="icon">
+              🏃
+            </div>
+            <span>
+              Run 10km
+            </span>
+            <strong>
+              39〜40分
+            </strong>
+          </div>
+
+          <div class="goal-card">
+            <div class="icon">
+              ⚡
+            </div>
+            <span>
+              FTP
+            </span>
+            <strong>
+              240W → 250W
+            </strong>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="bike">
+
+        <h2>
+          愛車
+        </h2>
+
+        <figure class="bike-photo">
+
+          <img
+            src="20260412_093239.jpg"
+            alt="琵琶湖畔のMERIDA REACTO 6000"
+          >
+
+          <figcaption>
+            琵琶湖畔で撮影した愛車
+            MERIDA REACTO 6000。
+          </figcaption>
+
+        </figure>
+
+        <div class="equipment-grid">
+
+          <div class="equipment-card">
+            <span>
+              Bike
+            </span>
+            <strong>
+              MERIDA REACTO 6000
+            </strong>
+          </div>
+
+          <div class="equipment-card">
+            <span>
+              Wheel
+            </span>
+            <strong>
+              MAVIC COSMIC SL45
+            </strong>
+          </div>
+
+          <div class="equipment-card">
+            <span>
+              Helmet
+            </span>
+            <strong>
+              OGK Kabuto AERO-R2
+            </strong>
+          </div>
+
+          <div class="equipment-card">
+            <span>
+              Bike Computer
+            </span>
+            <strong>
+              Garmin Edge 840 Solar
+            </strong>
+          </div>
+
+          <div class="equipment-card">
+            <span>
+              Watch
+            </span>
+            <strong>
+              Garmin Forerunner 255
+            </strong>
+          </div>
+
+          <div class="equipment-card">
+            <span>
+              Indoor Training
+            </span>
+            <strong>
+              Zwift ＋ KICKR
+            </strong>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section>
+
+        <h2>
+          このブログで発信すること
+        </h2>
+
+        <div class="content-grid">
+
+          <div class="content-card">
+            <div class="icon">
+              📅
+            </div>
+            <strong>
+              練習記録
+            </strong>
+          </div>
+
+          <div class="content-card">
+            <div class="icon">
+              🏁
+            </div>
+            <strong>
+              レース分析
+            </strong>
+          </div>
+
+          <div class="content-card">
+            <div class="icon">
+              🏊
+            </div>
+            <strong>
+              スイム成長記録
+            </strong>
+          </div>
+
+          <div class="content-card">
+            <div class="icon">
+              🚴
+            </div>
+            <strong>
+              機材レビュー
+            </strong>
+          </div>
+
+          <div class="content-card">
+            <div class="icon">
+              📊
+            </div>
+            <strong>
+              Garmin・Zwift分析
+            </strong>
+          </div>
+
+          <div class="content-card">
+            <div class="icon">
+              💊
+            </div>
+            <strong>
+              薬剤師目線の体調管理
+            </strong>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section>
+
+        <div class="message">
+
+          <h3>
+            最後に
+          </h3>
+
+          <p>
+            仕事をしながら競技力を伸ばすことは、
+            簡単ではありません。
+          </p>
+
+          <p>
+            それでも、限られた時間の中で
+            練習を積み重ね、
+            苦手を改善すれば、
+            目標には近づけると考えています。
+          </p>
+
+          <p>
+            スイムが苦手な人、
+            仕事と競技を両立したい人、
+            トライアスロンでさらに速くなりたい人にとって、
+            少しでも参考になる記録を残していきます。
+          </p>
+
+        </div>
+
+      </section>
+
+      <div class="button-area">
+
+        <a
+          class="button"
+          href="races.html"
+        >
+          出場大会を見る
+        </a>
+
+        <a
+          class="button secondary"
+          href="index.html"
+        >
+          トップページへ戻る
+        </a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+
+    <p>
+      © 2026 薬剤師トライアスリートへの道
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
