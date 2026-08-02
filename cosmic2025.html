@@ -2,18 +2,24 @@
 <html lang="ja">
 
 <head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TQT8EEHLBN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TQT8EEHLBN');
-</script>
-
   <meta charset="UTF-8">
+
+  <!-- Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-TQT8EEHLBN"
+  ></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-TQT8EEHLBN");
+  </script>
 
   <meta
     name="viewport"
@@ -22,11 +28,11 @@
 
   <meta
     name="description"
-    content="人生初のトライアスロン、コスミックレディース＆ビギナーズトライアスロンの結果と振り返り。男子6位で完走しました。"
+    content="人生初のトライアスロン、コスミックレディース＆ビギナーズトライアスロン2025のレース結果と振り返り。総合1時間23分05秒、男子6位で完走しました。"
   >
 
   <title>
-    人生初トライアスロン｜コスミック2025
+    人生初のトライアスロンで男子6位｜コスミック2025
   </title>
 
   <style>
@@ -40,6 +46,10 @@
       --muted: #687686;
       --border: #dbe5eb;
       --shadow: 0 9px 28px rgba(9, 35, 57, 0.09);
+
+      --swim: #1689b7;
+      --bike: #15966b;
+      --run: #d57828;
     }
 
     * {
@@ -58,7 +68,12 @@
         Arial,
         "Noto Sans JP",
         sans-serif;
-      line-height: 1.75;
+      line-height: 1.8;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
     }
 
     a {
@@ -66,21 +81,18 @@
     }
 
     .container {
-      width: min(
-        1000px,
-        calc(100% - 28px)
-      );
+      width: min(1000px, calc(100% - 28px));
       margin: 0 auto;
     }
 
     header {
-      padding: 85px 20px;
+      padding: 76px 20px;
       color: white;
       text-align: center;
       background:
         radial-gradient(
-          circle at 85% 15%,
-          rgba(25, 195, 199, 0.28),
+          circle at 84% 15%,
+          rgba(35, 198, 202, 0.25),
           transparent 30%
         ),
         linear-gradient(
@@ -91,11 +103,11 @@
         );
     }
 
-    .label {
+    .hero-label {
       display: inline-block;
       margin-bottom: 15px;
       padding: 7px 14px;
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.42);
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.08);
       font-size: 13px;
@@ -104,16 +116,15 @@
     }
 
     header h1 {
-      max-width: 850px;
-      margin: 0 auto;
-      font-size: clamp(31px, 7vw, 53px);
-      line-height: 1.25;
+      margin: 0;
+      font-size: clamp(30px, 7vw, 52px);
+      line-height: 1.3;
     }
 
     header p {
       margin: 16px 0 0;
       color: #dcecf4;
-      font-size: 17px;
+      font-size: 16px;
     }
 
     nav {
@@ -140,7 +151,7 @@
     }
 
     section {
-      margin-bottom: 26px;
+      margin-bottom: 29px;
       padding: 27px;
       border: 1px solid var(--border);
       border-radius: 20px;
@@ -149,82 +160,101 @@
     }
 
     h2 {
-      margin-top: 0;
-      padding-left: 12px;
+      margin: 0 0 20px;
+      padding-left: 13px;
       color: var(--navy);
       border-left: 6px solid var(--teal);
-      line-height: 1.4;
+      line-height: 1.45;
     }
 
     h3 {
-      color: var(--blue);
+      color: var(--navy);
+    }
+
+    p:first-child {
+      margin-top: 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
     }
 
     .lead {
-      margin: 0;
-      padding: 22px;
-      border-radius: 15px;
+      padding: 21px 24px;
+      border-left: 6px solid var(--teal);
       background: #eaf6f8;
       font-size: 17px;
       font-weight: bold;
     }
 
-    .info-grid {
+    .race-info {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      gap: 13px;
     }
 
-    .info-card {
-      padding: 20px 14px;
+    .info-item {
+      padding: 17px;
       text-align: center;
-      border-radius: 15px;
-      background: #eef8f9;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #f8fbfc;
     }
 
-    .info-card span {
+    .info-item span {
       display: block;
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12px;
     }
 
-    .info-card strong {
+    .info-item strong {
       display: block;
       margin-top: 5px;
       color: var(--blue);
-      font-size: 20px;
+      font-size: 17px;
     }
 
     .distance-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 18px;
+      gap: 13px;
+      margin-top: 14px;
     }
 
     .distance-card {
-      padding: 20px 12px;
+      padding: 18px 12px;
       text-align: center;
       border: 1px solid var(--border);
-      border-radius: 15px;
-      background: #fbfdfe;
+      border-radius: 14px;
+      background: white;
     }
 
     .distance-card .icon {
-      font-size: 31px;
+      font-size: 27px;
+    }
+
+    .distance-card span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 12px;
     }
 
     .distance-card strong {
       display: block;
       color: var(--blue);
-      font-size: 18px;
+      font-size: 17px;
     }
 
-    .main-result {
-      padding: 30px 18px;
+    .result-section {
+      padding: 28px;
+    }
+
+    .total-result {
+      padding: 26px 20px;
       color: white;
       text-align: center;
-      border-radius: 18px;
+      border-radius: 17px;
       background:
         linear-gradient(
           135deg,
@@ -233,108 +263,201 @@
         );
     }
 
-    .main-result span {
+    .total-result span {
       display: block;
-      font-size: 14px;
-      opacity: 0.92;
+      color: #c8e8ec;
+      font-size: 13px;
+      letter-spacing: 0.08em;
     }
 
-    .main-result strong {
+    .total-result strong {
       display: block;
       margin-top: 5px;
-      font-size: clamp(38px, 9vw, 60px);
+      font-size: clamp(39px, 9vw, 62px);
       line-height: 1.2;
     }
 
-    .ranking-grid {
+    .result-summary {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 18px;
+      gap: 13px;
+      margin-top: 14px;
     }
 
-    .ranking-card {
-      padding: 22px 12px;
+    .result-summary-item {
+      padding: 17px;
       text-align: center;
       border: 1px solid var(--border);
-      border-radius: 15px;
+      border-radius: 14px;
       background: #f8fbfc;
     }
 
-    .ranking-card span {
+    .result-summary-item span {
       display: block;
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12px;
     }
 
-    .ranking-card strong {
+    .result-summary-item strong {
       display: block;
+      margin-top: 4px;
       color: var(--blue);
-      font-size: 30px;
+      font-size: 22px;
     }
 
     .table-wrap {
+      margin-top: 17px;
       overflow-x: auto;
-      margin-top: 21px;
     }
 
-    table {
+    .result-table {
       width: 100%;
-      min-width: 570px;
       border-collapse: collapse;
     }
 
-    th,
-    td {
+    .result-table th,
+    .result-table td {
       padding: 14px 11px;
       border-bottom: 1px solid var(--border);
+      text-align: left;
     }
 
-    th {
+    .result-table th {
       color: white;
-      text-align: left;
       background: var(--blue);
     }
 
-    tr:nth-child(even) {
-      background: #f0f8f9;
+    .result-table tbody tr:nth-child(even) {
+      background: #eef7f8;
     }
 
-    td:nth-child(2),
-    td:nth-child(3) {
+    .result-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .result-table td:nth-child(2),
+    .result-table td:nth-child(3) {
+      white-space: nowrap;
+    }
+
+    .notice {
+      margin-top: 14px;
+      padding: 15px 17px;
+      color: var(--muted);
+      border: 1px dashed #b6c9d1;
+      border-radius: 12px;
+      background: #fafcfd;
+      font-size: 13px;
+    }
+
+    .discipline {
+      border-top: 7px solid var(--teal);
+    }
+
+    .discipline.swim {
+      border-top-color: var(--swim);
+    }
+
+    .discipline.bike {
+      border-top-color: var(--bike);
+    }
+
+    .discipline.run {
+      border-top-color: var(--run);
+    }
+
+    .discipline-title {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 17px;
+    }
+
+    .discipline-title h2 {
+      margin-bottom: 0;
+      padding-left: 0;
+      border-left: none;
+    }
+
+    .time-badge {
+      padding: 7px 13px;
+      color: white;
+      border-radius: 999px;
+      font-size: 14px;
       font-weight: bold;
     }
 
-    .review-box {
-      margin-top: 18px;
-      padding: 21px;
-      border-left: 6px solid var(--teal);
-      border-radius: 13px;
-      background: #f2f9fa;
+    .swim .time-badge {
+      background: var(--swim);
     }
 
-    .review-box h3 {
+    .bike .time-badge {
+      background: var(--bike);
+    }
+
+    .run .time-badge {
+      background: var(--run);
+    }
+
+    .race-photo {
+      margin: 24px 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .race-photo img {
+      width: 100%;
+      max-height: 680px;
+      object-fit: contain;
+      background: #e8f0f3;
+    }
+
+    .race-photo figcaption {
+      padding: 13px 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .point-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .point-card {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #f8fbfc;
+    }
+
+    .point-card h3 {
       margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 17px;
     }
 
-    .weak {
-      border-left-color: #d95858;
-      background: #fff4f4;
+    .point-card.good h3 {
+      color: var(--bike);
     }
 
-    .strong {
-      border-left-color: #23a261;
-      background: #f1faf5;
+    .point-card.issue h3 {
+      color: #b55742;
     }
 
-    .flow {
+    .rank-flow {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 18px;
+      gap: 13px;
     }
 
-    .flow-card {
+    .rank-item {
       padding: 18px 10px;
       text-align: center;
       border: 1px solid var(--border);
@@ -342,20 +465,20 @@
       background: #f8fbfc;
     }
 
-    .flow-card span {
+    .rank-item span {
       display: block;
       color: var(--muted);
       font-size: 12px;
     }
 
-    .flow-card strong {
+    .rank-item strong {
       display: block;
-      margin-top: 5px;
+      margin-top: 4px;
       color: var(--blue);
       font-size: 21px;
     }
 
-    .summary {
+    .finish-message {
       padding: 25px;
       color: white;
       border-radius: 17px;
@@ -367,21 +490,16 @@
         );
     }
 
-    .summary h3 {
+    .finish-message h3 {
       margin-top: 0;
       color: white;
     }
 
-    .summary p:last-child {
-      margin-bottom: 0;
-    }
-
-    .note {
+    .memo {
       padding: 20px;
-      border: 2px dashed #b9cbd5;
+      border: 1px dashed #b7c9d2;
       border-radius: 14px;
-      color: #566674;
-      background: #f8fbfc;
+      background: #fbfcfd;
     }
 
     .button-area {
@@ -389,7 +507,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin-top: 33px;
+      margin-top: 35px;
     }
 
     .button {
@@ -419,27 +537,33 @@
       margin: 0;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 760px) {
       header {
-        padding: 67px 17px;
+        padding: 61px 16px;
       }
 
       section {
-        padding: 20px;
+        padding: 21px;
       }
 
-      .info-grid,
+      .race-info,
       .distance-grid,
-      .ranking-grid {
+      .result-summary,
+      .point-grid,
+      .rank-flow {
         grid-template-columns: 1fr;
       }
 
-      .flow {
-        grid-template-columns: repeat(2, 1fr);
+      .result-table {
+        font-size: 13px;
+      }
+
+      .result-table th,
+      .result-table td {
+        padding: 11px 7px;
       }
 
       .button {
-        display: block;
         width: 100%;
         text-align: center;
       }
@@ -451,16 +575,18 @@
 
   <header>
 
-    <div class="label">
+    <div class="hero-label">
       FIRST TRIATHLON
     </div>
 
     <h1>
-      人生初のトライアスロンで男子6位
+      人生初のトライアスロンで<br>
+      男子6位
     </h1>
 
     <p>
-      コスミックレディース＆ビギナーズトライアスロン
+      コスミックレディース＆ビギナーズ<br>
+      トライアスロン2025
     </p>
 
   </header>
@@ -479,6 +605,10 @@
       振り返り
     </a>
 
+    <a href="#finish">
+      フィニッシュ
+    </a>
+
     <a href="races.html">
       レース一覧
     </a>
@@ -489,13 +619,11 @@
 
     <div class="container">
 
-      <section>
+      <section class="lead">
 
-        <p class="lead">
-          人生初のトライアスロンは、
-          スイム37位からバイク4位、ラン4位まで追い上げ、
-          男子6位でフィニッシュしました。
-        </p>
+        人生初のトライアスロンは、
+        スイム37位からバイク4位、ラン4位まで順位を上げ、
+        男子6位でフィニッシュしました。
 
       </section>
 
@@ -505,9 +633,9 @@
           大会概要
         </h2>
 
-        <div class="info-grid">
+        <div class="race-info">
 
-          <div class="info-card">
+          <div class="info-item">
 
             <span>
               開催年
@@ -519,7 +647,7 @@
 
           </div>
 
-          <div class="info-card">
+          <div class="info-item">
 
             <span>
               開催地
@@ -531,7 +659,7 @@
 
           </div>
 
-          <div class="info-card">
+          <div class="info-item">
 
             <span>
               ゼッケン
@@ -553,8 +681,12 @@
               🏊
             </div>
 
+            <span>
+              Swim
+            </span>
+
             <strong>
-              Swim 0.75km
+              0.75km
             </strong>
 
           </div>
@@ -565,8 +697,12 @@
               🚴
             </div>
 
+            <span>
+              Bike
+            </span>
+
             <strong>
-              Bike 20km
+              20km
             </strong>
 
           </div>
@@ -577,8 +713,12 @@
               🏃
             </div>
 
+            <span>
+              Run
+            </span>
+
             <strong>
-              Run 5km
+              5km
             </strong>
 
           </div>
@@ -587,13 +727,16 @@
 
       </section>
 
-      <section id="result">
+      <section
+        class="result-section"
+        id="result"
+      >
 
         <h2>
           レース結果
         </h2>
 
-        <div class="main-result">
+        <div class="total-result">
 
           <span>
             総合タイム
@@ -605,9 +748,9 @@
 
         </div>
 
-        <div class="ranking-grid">
+        <div class="result-summary">
 
-          <div class="ranking-card">
+          <div class="result-summary-item">
 
             <span>
               男子順位
@@ -619,7 +762,7 @@
 
           </div>
 
-          <div class="ranking-card">
+          <div class="result-summary-item">
 
             <span>
               ゼッケン
@@ -635,66 +778,36 @@
 
         <div class="table-wrap">
 
-          <table>
+          <table class="result-table">
 
             <thead>
+
               <tr>
-                <th>
-                  セクション
-                </th>
-
-                <th>
-                  区間タイム
-                </th>
-
-                <th>
-                  区間順位
-                </th>
+                <th>セクション</th>
+                <th>区間タイム</th>
+                <th>区間順位</th>
               </tr>
+
             </thead>
 
             <tbody>
 
               <tr>
-                <td>
-                  🏊 スイム 0.75km
-                </td>
-
-                <td>
-                  17:35.8
-                </td>
-
-                <td>
-                  37位
-                </td>
+                <td>🏊 スイム 0.75km</td>
+                <td>17:35.8</td>
+                <td>37位</td>
               </tr>
 
               <tr>
-                <td>
-                  🚴 バイク区間
-                </td>
-
-                <td>
-                  43:11.1
-                </td>
-
-                <td>
-                  4位
-                </td>
+                <td>🚴 バイク区間</td>
+                <td>43:11.1</td>
+                <td>4位</td>
               </tr>
 
               <tr>
-                <td>
-                  🏃 ラン区間
-                </td>
-
-                <td>
-                  22:18.6
-                </td>
-
-                <td>
-                  4位
-                </td>
+                <td>🏃 ラン区間</td>
+                <td>22:18.6</td>
+                <td>4位</td>
               </tr>
 
             </tbody>
@@ -703,7 +816,7 @@
 
         </div>
 
-        <div class="note">
+        <div class="notice">
 
           公式リザルトでは、
           T1とT2が独立したタイムとして掲載されていないため、
@@ -713,68 +826,194 @@
 
       </section>
 
-      <section id="review">
+      <section
+        class="discipline swim"
+        id="review"
+      >
 
-        <h2>
-          レース振り返り
-        </h2>
+        <div class="discipline-title">
 
-        <div class="review-box weak">
-
-          <h3>
+          <h2>
             🏊 スイム
-          </h3>
+          </h2>
 
-          <p>
-            750mを17分35秒8、区間37位。
-            100m平均は約2分21秒でした。
-          </p>
-
-          <p>
-            人生初のレースでも、
-            スイムで後方からスタートする展開になりました。
-            この時点ですでに、
-            スイム強化が総合タイム短縮の重要課題として
-            表れていました。
-          </p>
+          <div class="time-badge">
+            17分35秒・37位
+          </div>
 
         </div>
 
-        <div class="review-box strong">
+        <p>
+          750mを17分35秒8で泳ぎ、
+          区間順位は37位でした。
+          100m平均は約2分21秒です。
+        </p>
 
-          <h3>
+        <p>
+          人生初のトライアスロンだったため、
+          スイムで後方からスタートする展開になりました。
+          このレースを通じて、
+          総合順位を上げるにはスイム強化が必要だと
+          明確に分かりました。
+        </p>
+
+        <div class="point-grid">
+
+          <div class="point-card good">
+
+            <h3>
+              良かった点
+            </h3>
+
+            <p>
+              初めての実戦スイムを終え、
+              バイクとランへ進むことができました。
+            </p>
+
+          </div>
+
+          <div class="point-card issue">
+
+            <h3>
+              改善点
+            </h3>
+
+            <p>
+              直進性、呼吸の安定、
+              集団内での位置取り、
+              巡航ペースの向上が必要です。
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="discipline bike">
+
+        <div class="discipline-title">
+
+          <h2>
             🚴 バイク
-          </h3>
+          </h2>
 
-          <p>
-            バイク区間は43分11秒1、区間4位。
-            スイム37位から大きく順位を戻しました。
-          </p>
-
-          <p>
-            初めてのトライアスロンでも、
-            バイクで上位の区間順位を出せたことは、
-            大きな手応えになりました。
-          </p>
+          <div class="time-badge">
+            43分11秒・4位
+          </div>
 
         </div>
 
-        <div class="review-box strong">
+        <figure class="race-photo">
 
-          <h3>
+          <img
+            src="1785671771182.jpg"
+            alt="コスミックトライアスロン2025のバイク区間を走る様子"
+          >
+
+          <figcaption>
+            バイク区間。スイム後に順位を大きく上げた場面。
+          </figcaption>
+
+        </figure>
+
+        <p>
+          バイク区間は43分11秒1で、
+          区間順位は4位でした。
+          スイム37位から大きく順位を戻すことができました。
+        </p>
+
+        <p>
+          初めてのトライアスロンでも、
+          バイクで上位の区間順位を出せたことは、
+          今後へ向けた大きな自信になりました。
+        </p>
+
+        <div class="point-grid">
+
+          <div class="point-card good">
+
+            <h3>
+              良かった点
+            </h3>
+
+            <p>
+              区間4位の走りで、
+              スイムの遅れを大きく挽回できました。
+            </p>
+
+          </div>
+
+          <div class="point-card issue">
+
+            <h3>
+              改善点
+            </h3>
+
+            <p>
+              より長いODの40kmでも速度を維持できるよう、
+              持久力と巡航効率を高める必要があります。
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="discipline run">
+
+        <div class="discipline-title">
+
+          <h2>
             🏃 ラン
-          </h3>
+          </h2>
 
-          <p>
-            ラン区間は22分18秒6、区間4位。
-            バイクに続いて上位のタイムを記録しました。
-          </p>
+          <div class="time-badge">
+            22分18秒・4位
+          </div>
 
-          <p>
-            陸上競技で培った走力を、
-            初めてのトライアスロンでも
-            発揮できたレースでした。
-          </p>
+        </div>
+
+        <p>
+          ラン区間は22分18秒6で、
+          区間順位は4位でした。
+          バイクに続いて上位のタイムを記録しました。
+        </p>
+
+        <p>
+          学生時代から取り組んできた陸上競技の走力を生かし、
+          初めてのトライアスロンでも
+          ランで順位を上げることができました。
+        </p>
+
+        <div class="point-grid">
+
+          <div class="point-card good">
+
+            <h3>
+              良かった点
+            </h3>
+
+            <p>
+              バイク後でも大きく崩れず、
+              得意なランで区間4位に入りました。
+            </p>
+
+          </div>
+
+          <div class="point-card issue">
+
+            <h3>
+              改善点
+            </h3>
+
+            <p>
+              トランジション後の序盤から、
+              より早くランのリズムへ移ることが課題です。
+            </p>
+
+          </div>
 
         </div>
 
@@ -786,9 +1025,9 @@
           順位の変化
         </h2>
 
-        <div class="flow">
+        <div class="rank-flow">
 
-          <div class="flow-card">
+          <div class="rank-item">
 
             <span>
               スイム
@@ -800,7 +1039,7 @@
 
           </div>
 
-          <div class="flow-card">
+          <div class="rank-item">
 
             <span>
               バイク
@@ -812,7 +1051,7 @@
 
           </div>
 
-          <div class="flow-card">
+          <div class="rank-item">
 
             <span>
               ラン
@@ -824,7 +1063,7 @@
 
           </div>
 
-          <div class="flow-card">
+          <div class="rank-item">
 
             <span>
               最終順位
@@ -840,13 +1079,26 @@
 
       </section>
 
-      <section>
+      <section id="finish">
 
         <h2>
-          総評
+          フィニッシュ
         </h2>
 
-        <div class="summary">
+        <figure class="race-photo">
+
+          <img
+            src="1785671771144.jpg"
+            alt="人生初のトライアスロンをフィニッシュする様子"
+          >
+
+          <figcaption>
+            人生初のトライアスロンを完走した瞬間。
+          </figcaption>
+
+        </figure>
+
+        <div class="finish-message">
 
           <h3>
             人生初レースで得た手応え
@@ -854,7 +1106,7 @@
 
           <p>
             人生初のトライアスロンは、
-            男子6位という好結果で終えることができました。
+            男子6位という成績で終えることができました。
           </p>
 
           <p>
@@ -865,14 +1117,8 @@
 
           <p>
             一方で、スイム37位という結果から、
-            総合力をさらに高めるためには
-            スイム改善が必要だと分かりました。
-          </p>
-
-          <p>
-            この大会が、
-            オリンピックディスタンス2時間30分切りを目指す
-            挑戦の出発点になりました。
+            総合力をさらに高めるには
+            スイム強化が最も重要だと分かりました。
           </p>
 
         </div>
@@ -882,13 +1128,37 @@
       <section>
 
         <h2>
-          本人のレースメモ
+          完走後
         </h2>
 
-        <div class="note">
+        <figure class="race-photo">
+
+          <img
+            src="1785671770984.jpg"
+            alt="コスミックトライアスロン完走後の記念写真"
+          >
+
+          <figcaption>
+            完走証を受け取った後の記念撮影。
+          </figcaption>
+
+        </figure>
+
+        <div class="memo">
+
+          <h3>
+            本人のレースメモ
+          </h3>
 
           <p>
-            女性またはビギナー限定ということもあり上位でフィニッシュすることができた。カナヅチからのトライアスロン初完走ということもありフィニッシュ時はかなり嬉しかった。
+            女性またはビギナー限定ということもあり、
+            上位でフィニッシュすることができました。
+          </p>
+
+          <p>
+            初完走の喜びと同時に、
+            スイムを改善すればさらに上を目指せるという
+            手応えを得た大会でした。
           </p>
 
         </div>
