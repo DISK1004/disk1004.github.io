@@ -1,121 +1,212 @@
+---
+layout: null
+title: トレーニング記録
+---
+
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+  <meta charset="UTF-8">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TQT8EEHLBN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQT8EEHLBN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-TQT8EEHLBN');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
+    gtag('js', new Date());
+    gtag('config', 'G-TQT8EEHLBN');
+  </script>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-<title>練習日記</title>
+  <title>
+    トレーニング記録｜薬剤師トライアスリートへの道
+  </title>
 
-<style>
-body{
-font-family:Arial,sans-serif;
-background:#f4f6f8;
-margin:0;
-color:#222;
-}
+  <style>
+    :root {
+      --navy: #071b33;
+      --blue: #08667d;
+      --teal: #0b929e;
+      --light: #f2f6f8;
+      --white: #ffffff;
+      --text: #1c2835;
+      --muted: #687686;
+      --border: #dbe5eb;
+    }
 
-header{
-background:#087f8c;
-color:white;
-padding:30px;
-text-align:center;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-main{
-max-width:900px;
-margin:auto;
-padding:20px;
-}
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--light);
+      font-family: Arial, "Noto Sans JP", sans-serif;
+      line-height: 1.75;
+    }
 
-article{
-background:white;
-padding:20px;
-margin-bottom:20px;
-border-radius:12px;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
+    header {
+      padding: 75px 20px;
+      color: white;
+      text-align: center;
+      background: linear-gradient(
+        135deg,
+        var(--navy),
+        var(--blue),
+        var(--teal)
+      );
+    }
 
-h2{
-color:#087f8c;
-}
+    header h1 {
+      margin: 0;
+      font-size: clamp(34px, 7vw, 54px);
+    }
 
-a{
-color:#087f8c;
-text-decoration:none;
-font-weight:bold;
-}
+    nav {
+      padding: 14px;
+      text-align: center;
+      background: white;
+    }
 
-.back{
-display:inline-block;
-margin-top:20px;
-}
-</style>
+    nav a {
+      margin: 5px 10px;
+      color: var(--blue);
+      font-weight: bold;
+      text-decoration: none;
+    }
 
+    main {
+      width: min(950px, calc(100% - 28px));
+      margin: 35px auto 70px;
+    }
+
+    .post-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    article {
+      padding: 23px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: white;
+    }
+
+    time {
+      display: inline-block;
+      padding: 5px 10px;
+      color: var(--blue);
+      border-radius: 999px;
+      background: #e1f3f5;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    article h2 {
+      margin: 13px 0 8px;
+      color: var(--navy);
+    }
+
+    .meta {
+      color: var(--muted);
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--teal);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 35px 15px;
+      color: white;
+      text-align: center;
+      background: var(--navy);
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-<h1>練習日記</h1>
-<p>ODサブ2時間30分への記録</p>
-</header>
+  <header>
+    <h1>トレーニング記録</h1>
 
-<main>
+    <p>
+      ODサブ2時間30分へ向けた日々の練習
+    </p>
+  </header>
 
-<article>
+  <nav>
+    <a href="index.html">トップ</a>
+    <a href="races.html">出場大会</a>
+    <a href="profile.html">プロフィール</a>
+  </nav>
 
-<h2>2026年8月2日</h2>
+  <main>
 
-<p>
-🚴 リカバリーバイク
-</p>
+    <div class="post-list">
 
-<ul>
-<li>時間：25分23秒</li>
-<li>平均パワー：148W</li>
-<li>NP：154W</li>
-<li>平均心拍：116bpm</li>
-<li>TSS：20.9</li>
-<li>トレーニング効果：有酸素2.1</li>
-</ul>
+      {% for post in site.posts %}
 
-<p>
-疲労回復目的の軽めのライド。
-HRV低下のため無理をせず終了。
-</p>
+        <article>
 
-</article>
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%Y年%m月%d日" }}
+          </time>
 
-<article>
+          <h2>
+            {{ post.title }}
+          </h2>
 
-<h2>今後追加予定</h2>
+          <p class="meta">
+            {% if post.category %}
+              {{ post.category }}
+            {% endif %}
 
-<ul>
-<li>スイム練習</li>
-<li>ラン練習</li>
-<li>Zwift</li>
-<li>レースレポート</li>
-</ul>
+            {% if post.duration %}
+              ／ {{ post.duration }}
+            {% endif %}
 
-</article>
+            {% if post.distance %}
+              ／ {{ post.distance }}
+            {% endif %}
+          </p>
 
-<a class="back" href="index.html">
-← トップページへ戻る
-</a>
+          <p>
+            {{ post.excerpt | strip_html | truncate: 120 }}
+          </p>
 
-</main>
+          <a
+            class="read-more"
+            href="{{ post.url | relative_url }}"
+          >
+            詳細を見る →
+          </a>
+
+        </article>
+
+      {% endfor %}
+
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 薬剤師トライアスリートへの道
+  </footer>
 
 </body>
+
 </html>
