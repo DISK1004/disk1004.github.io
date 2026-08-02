@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQT8EEHLBN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-TQT8EEHLBN');
+  </script>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="{{ page.description | default: page.excerpt | strip_html | strip_newlines }}"
+  >
+
+  <title>
+    {{ page.title }}｜薬剤師トライアスリートへの道
+  </title>
+
+  <style>
+    :root {
+      --navy: #071b33;
+      --blue: #08667d;
+      --teal: #0b929e;
+      --light: #f2f6f8;
+      --white: #ffffff;
+      --text: #1c2835;
+      --muted: #687686;
+      --border: #dbe5eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--light);
+      font-family: Arial, "Noto Sans JP", sans-serif;
+      line-height: 1.8;
+    }
+
+    header {
+      padding: 65px 20px;
+      color: white;
+      text-align: center;
+      background: linear-gradient(
+        135deg,
+        var(--navy),
+        var(--blue),
+        var(--teal)
+      );
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(29px, 7vw, 48px);
+      line-height: 1.3;
+    }
+
+    header p {
+      margin: 13px 0 0;
+      color: #dcecf4;
+    }
+
+    nav {
+      padding: 14px;
+      text-align: center;
+      background: white;
+      box-shadow: 0 3px 14px rgba(20, 45, 70, .1);
+    }
+
+    nav a {
+      margin: 5px 10px;
+      color: var(--blue);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    main {
+      width: min(850px, calc(100% - 28px));
+      margin: 35px auto 70px;
+      padding: 27px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: white;
+    }
+
+    h2,
+    h3 {
+      color: var(--navy);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 14px;
+    }
+
+    .meta {
+      margin-bottom: 25px;
+      padding: 15px 18px;
+      color: var(--muted);
+      border-radius: 12px;
+      background: #f2f8f9;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 20px;
+      color: white;
+      border-radius: 10px;
+      background: var(--teal);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 35px 15px;
+      color: white;
+      text-align: center;
+      background: var(--navy);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>{{ page.title }}</h1>
+
+    <p>
+      {{ page.date | date: "%Y年%m月%d日" }}
+      {% if page.category %}
+        ／ {{ page.category }}
+      {% endif %}
+    </p>
+  </header>
+
+  <nav>
+    <a href="{{ '/' | relative_url }}">トップ</a>
+    <a href="{{ '/training.html' | relative_url }}">練習一覧</a>
+    <a href="{{ '/races.html' | relative_url }}">レース結果</a>
+    <a href="{{ '/profile.html' | relative_url }}">プロフィール</a>
+  </nav>
+
+  <main>
+
+    <div class="meta">
+      {% if page.duration %}
+        時間：{{ page.duration }}
+      {% endif %}
+
+      {% if page.distance %}
+        ／ 距離：{{ page.distance }}
+      {% endif %}
+
+      {% if page.category %}
+        ／ 種目：{{ page.category }}
+      {% endif %}
+    </div>
+
+    {{ content }}
+
+    <a
+      class="back"
+      href="{{ '/training.html' | relative_url }}"
+    >
+      ← 練習一覧へ戻る
+    </a>
+
+  </main>
+
+  <footer>
+    © 2026 薬剤師トライアスリートへの道
+  </footer>
+
+</body>
+
+</html>
