@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="第13回愛南町いやしの郷トライアスロン大会のレース結果と振り返り。トランジションでシューズが壊れるトラブルも経験しました。"
+  >
+
+  <title>
+    愛南町いやしの郷トライアスロン2026｜レース結果
+  </title>
+
+  <style>
+    :root {
+      --navy: #071b33;
+      --blue: #08667d;
+      --teal: #0b929e;
+      --light: #f2f6f8;
+      --white: #ffffff;
+      --text: #1c2835;
+      --muted: #687686;
+      --border: #dbe5eb;
+      --danger: #c94b4b;
+      --warning: #d98521;
+      --success: #24955c;
+      --shadow: 0 9px 28px rgba(9, 35, 57, 0.09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--light);
+      font-family:
+        Arial,
+        "Noto Sans JP",
+        sans-serif;
+      line-height: 1.75;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(
+        1000px,
+        calc(100% - 28px)
+      );
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 85px 20px;
+      color: white;
+      text-align: center;
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(25, 195, 199, 0.28),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          var(--navy),
+          var(--blue) 65%,
+          var(--teal)
+        );
+    }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 7px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.12em;
+    }
+
+    header h1 {
+      max-width: 850px;
+      margin: 0 auto;
+      font-size: clamp(30px, 7vw, 52px);
+      line-height: 1.25;
+    }
+
+    header p {
+      margin: 16px 0 0;
+      color: #dcecf4;
+      font-size: 17px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      padding: 13px 8px;
+      text-align: center;
+      background: white;
+      box-shadow: 0 3px 14px rgba(20, 45, 70, 0.1);
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 5px 10px;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 40px 0 75px;
+    }
+
+    section {
+      margin-bottom: 26px;
+      padding: 27px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin-top: 0;
+      padding-left: 12px;
+      color: var(--navy);
+      border-left: 6px solid var(--teal);
+      line-height: 1.4;
+    }
+
+    h3 {
+      color: var(--blue);
+    }
+
+    .lead {
+      margin: 0;
+      padding: 22px;
+      border-radius: 15px;
+      background: #eaf6f8;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .info-card {
+      padding: 20px 14px;
+      text-align: center;
+      border-radius: 15px;
+      background: #eef8f9;
+    }
+
+    .info-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .info-card strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--blue);
+      font-size: 20px;
+    }
+
+    .distance-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .distance-card {
+      padding: 20px 12px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: #fbfdfe;
+    }
+
+    .distance-card .icon {
+      font-size: 31px;
+    }
+
+    .distance-card strong {
+      display: block;
+      color: var(--blue);
+      font-size: 18px;
+    }
+
+    .main-result {
+      padding: 30px 18px;
+      color: white;
+      text-align: center;
+      border-radius: 18px;
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy),
+          var(--blue)
+        );
+    }
+
+    .main-result span {
+      display: block;
+      font-size: 14px;
+      opacity: 0.92;
+    }
+
+    .main-result strong {
+      display: block;
+      margin-top: 5px;
+      font-size: clamp(38px, 9vw, 60px);
+      line-height: 1.2;
+    }
+
+    .ranking-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .ranking-card {
+      padding: 22px 12px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: #f8fbfc;
+    }
+
+    .ranking-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .ranking-card strong {
+      display: block;
+      color: var(--blue);
+      font-size: 28px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 21px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 590px;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 14px 11px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      color: white;
+      text-align: left;
+      background: var(--blue);
+    }
+
+    tr:nth-child(even) {
+      background: #f0f8f9;
+    }
+
+    td:nth-child(2),
+    td:nth-child(3) {
+      font-weight: bold;
+    }
+
+    .review-box {
+      margin-top: 18px;
+      padding: 21px;
+      border-left: 6px solid var(--teal);
+      border-radius: 13px;
+      background: #f2f9fa;
+    }
+
+    .review-box h3 {
+      margin-top: 0;
+    }
+
+    .weak {
+      border-left-color: var(--danger);
+      background: #fff4f4;
+    }
+
+    .warning {
+      border-left-color: var(--warning);
+      background: #fff8ee;
+    }
+
+    .strong {
+      border-left-color: var(--success);
+      background: #f1faf5;
+    }
+
+    .photo {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #f8fbfc;
+    }
+
+    .photo img {
+      width: 100%;
+      max-height: 650px;
+      object-fit: contain;
+      background: #172033;
+    }
+
+    .photo figcaption {
+      padding: 15px 17px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .trouble {
+      margin-top: 20px;
+      padding: 22px;
+      border-left: 6px solid var(--danger);
+      border-radius: 14px;
+      background: #fff3f3;
+    }
+
+    .trouble h3 {
+      margin-top: 0;
+      color: #a93b3b;
+    }
+
+    .summary {
+      padding: 25px;
+      color: white;
+      border-radius: 17px;
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy),
+          var(--blue)
+        );
+    }
+
+    .summary h3 {
+      margin-top: 0;
+      color: white;
+    }
+
+    .summary p:last-child {
+      margin-bottom: 0;
+    }
+
+    .note {
+      padding: 20px;
+      border: 2px dashed #b9cbd5;
+      border-radius: 14px;
+      color: #566674;
+      background: #f8fbfc;
+    }
+
+    .button-area {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 33px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      color: white;
+      border-radius: 11px;
+      background: var(--teal);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      color: var(--blue);
+      border: 1px solid var(--blue);
+      background: white;
+    }
+
+    footer {
+      padding: 38px 15px;
+      color: white;
+      text-align: center;
+      background: var(--navy);
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 67px 17px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      .info-grid,
+      .distance-grid,
+      .ranking-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="label">
+      RACE REPORT
+    </div>
+
+    <h1>
+      愛南町いやしの郷トライアスロン2026
+    </h1>
+
+    <p>
+      スイム1.5km・バイク40km・ラン10km
+    </p>
+
+  </header>
+
+  <nav>
+
+    <a href="#overview">
+      大会概要
+    </a>
+
+    <a href="#result">
+      結果
+    </a>
+
+    <a href="#review">
+      振り返り
+    </a>
+
+    <a href="#trouble">
+      トラブル
+    </a>
+
+    <a href="races.html">
+      レース一覧
+    </a>
+
+  </nav>
+
+  <main>
+
+    <div class="container">
+
+      <section>
+
+        <p class="lead">
+          スイムで大きく出遅れ、
+          バイクで順位を戻したものの、
+          ランでは脚のトラブルとシューズ破損に苦しんだレースでした。
+        </p>
+
+      </section>
+
+      <section id="overview">
+
+        <h2>
+          大会概要
+        </h2>
+
+        <div class="info-grid">
+
+          <div class="info-card">
+
+            <span>
+              開催日
+            </span>
+
+            <strong>
+              2026年6月6日
+            </strong>
+
+          </div>
+
+          <div class="info-card">
+
+            <span>
+              ゼッケン
+            </span>
+
+            <strong>
+              3510
+            </strong>
+
+          </div>
+
+          <div class="info-card">
+
+            <span>
+              年代区分
+            </span>
+
+            <strong>
+              M35-39
+            </strong>
+
+          </div>
+
+        </div>
+
+        <div class="distance-grid">
+
+          <div class="distance-card">
+
+            <div class="icon">
+              🏊
+            </div>
+
+            <strong>
+              Swim 1.5km
+            </strong>
+
+          </div>
+
+          <div class="distance-card">
+
+            <div class="icon">
+              🚴
+            </div>
+
+            <strong>
+              Bike 40km
+            </strong>
+
+          </div>
+
+          <div class="distance-card">
+
+            <div class="icon">
+              🏃
+            </div>
+
+            <strong>
+              Run 10km
+            </strong>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="result">
+
+        <h2>
+          レース結果
+        </h2>
+
+        <div class="main-result">
+
+          <span>
+            総合タイム
+          </span>
+
+          <strong>
+            3:51:36
+          </strong>
+
+        </div>
+
+        <div class="ranking-grid">
+
+          <div class="ranking-card">
+
+            <span>
+              総合順位
+            </span>
+
+            <strong>
+              266位
+            </strong>
+
+          </div>
+
+          <div class="ranking-card">
+
+            <span>
+              男子順位
+            </span>
+
+            <strong>
+              223位
+            </strong>
+
+          </div>
+
+          <div class="ranking-card">
+
+            <span>
+              M35-39
+            </span>
+
+            <strong>
+              11位
+            </strong>
+
+          </div>
+
+        </div>
+
+        <div class="table-wrap">
+
+          <table>
+
+            <thead>
+              <tr>
+                <th>
+                  セクション
+                </th>
+
+                <th>
+                  タイム
+                </th>
+
+                <th>
+                  順位
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>
+                  🏊 スイム
+                </td>
+
+                <td>
+                  47:14
+                </td>
+
+                <td>
+                  283位
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  🚴 バイク
+                </td>
+
+                <td>
+                  1:33:55
+                </td>
+
+                <td>
+                  127位
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  🏃 ラン
+                </td>
+
+                <td>
+                  1:30:27
+                </td>
+
+                <td>
+                  290位
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+        <div class="note">
+
+          公式記録では、
+          トランジションタイムは独立して掲載されず、
+          スイム・バイク・ランの各ラップに含まれています。
+
+        </div>
+
+      </section>
+
+      <section id="review">
+
+        <h2>
+          レース振り返り
+        </h2>
+
+        <div class="review-box weak">
+
+          <h3>
+            🏊 スイム
+          </h3>
+
+          <p>
+            スイムは47分14秒、283位。
+            今回も最初の種目で大きく出遅れる展開になりました。
+          </p>
+
+          <p>
+            ODサブ2時間30分を目指すうえでは、
+            スイムの巡航力とオープンウォーター対応を
+            最優先で改善する必要があります。
+          </p>
+
+        </div>
+
+        <div class="review-box strong">
+
+          <h3>
+            🚴 バイク
+          </h3>
+
+          <p>
+            バイクは1時間33分55秒、127位。
+            スイム283位から大きく順位を戻しました。
+          </p>
+
+          <p>
+            3種目の中では最も良い区間順位で、
+            現状ではスイムよりも戦えている種目です。
+          </p>
+
+          <p>
+            ただし、ODサブ2時間30分の目標タイムである
+            1時間10〜12分と比べると、
+            巡航力にはまだ大きな改善余地があります。
+          </p>
+
+        </div>
+
+        <div class="review-box weak">
+
+          <h3>
+            🏃 ラン
+          </h3>
+
+          <p>
+            ランは1時間30分27秒、290位。
+            本来の走力を発揮できない結果になりました。
+          </p>
+
+          <p>
+            レース中の脚の状態やシューズトラブルが重なり、
+            タイムと順位の両方に大きく影響しました。
+          </p>
+
+          <p>
+            ランそのものの能力不足というより、
+            バイク後の疲労、補給、筋痙攣、
+            装備トラブルへの対策が重要な課題です。
+          </p>
+
+        </div>
+
+      </section>
+
+      <section id="trouble">
+
+        <h2>
+          トランジションで起きたトラブル
+        </h2>
+
+        <figure class="photo">
+
+          <img
+            src="20260606_171952.jpg"
+            alt="愛南町いやしの郷トライアスロンのトランジションで壊れたランニングシューズ"
+          >
+
+          <figcaption>
+            トランジション時に壊れたランニングシューズ。
+            ソールが大きく剥がれ、レース中の走行に影響した。
+          </figcaption>
+
+        </figure>
+
+        <div class="trouble">
+
+          <h3>
+            シューズのソールが剥離
+          </h3>
+
+          <p>
+            トランジション時に、
+            ランニングシューズのソールが大きく剥がれていることが分かりました。
+          </p>
+
+          <p>
+            そのまま走る必要があり、
+            接地の安定性や走りやすさに影響した可能性があります。
+          </p>
+
+          <p>
+            レース用シューズは、
+            前日だけでなくレース当日の朝にも、
+            ソールの接着、アッパー、靴ひも、
+            インソールの状態を確認する必要があります。
+          </p>
+
+        </div>
+
+      </section>
+
+      <section>
+
+        <h2>
+          このレースで見えた課題
+        </h2>
+
+        <ul>
+
+          <li>
+            スイムの巡航ペースを上げる
+          </li>
+
+          <li>
+            オープンウォーターでの泳ぎに慣れる
+          </li>
+
+          <li>
+            バイク40kmの巡航力を向上させる
+          </li>
+
+          <li>
+            バイク後の筋痙攣対策を見直す
+          </li>
+
+          <li>
+            補給と電解質摂取を再検討する
+          </li>
+
+          <li>
+            レース前にシューズの破損を確認する
+          </li>
+
+        </ul>
+
+      </section>
+
+      <section>
+
+        <h2>
+          総評
+        </h2>
+
+        <div class="summary">
+
+          <h3>
+            得意なランを発揮できなかったレース
+          </h3>
+
+          <p>
+            総合タイムは3時間51分36秒、
+            総合266位、M35-39で11位でした。
+          </p>
+
+          <p>
+            スイムで大きく遅れ、
+            バイクでは順位を戻したものの、
+            ランでは本来の走力を発揮できませんでした。
+          </p>
+
+          <p>
+            シューズ破損や脚のトラブルが重なったことで、
+            単純な走力だけではレース結果が決まらないことを
+            実感した大会でした。
+          </p>
+
+          <p>
+            今後はスイムとバイクの強化に加え、
+            補給、筋痙攣対策、装備点検まで含めて
+            レース全体を整える必要があります。
+          </p>
+
+        </div>
+
+      </section>
+
+      <section>
+
+        <h2>
+          本人のレースメモ
+        </h2>
+
+        <div class="note">
+
+          <p>
+            ここには後から、
+            シューズが壊れた瞬間の状況、
+            ハムストリングが攣った場所、
+            補給内容、気温、ラン中の気持ちなどを
+            追加できます。
+          </p>
+
+        </div>
+
+      </section>
+
+      <div class="button-area">
+
+        <a
+          class="button"
+          href="races.html"
+        >
+          ← レース一覧へ戻る
+        </a>
+
+        <a
+          class="button secondary"
+          href="index.html"
+        >
+          トップページへ
+        </a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+
+    <p>
+      © 2026 薬剤師トライアスリートへの道
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
