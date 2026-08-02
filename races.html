@@ -1,585 +1,170 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>レース結果一覧 | 薬剤師トライアスリートへの道</title>
 
-  <title>伊勢志摩・里海トライアスロン2026｜レース結果</title>
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f3f6f8;
+color:#222;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+header{
+background:linear-gradient(135deg,#003b5c,#0b8a94);
+color:white;
+text-align:center;
+padding:60px 20px;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, "Noto Sans JP", sans-serif;
-      line-height: 1.8;
-      color: #1f2937;
-      background: #f2f5f8;
-    }
+header h1{
+margin:0;
+font-size:42px;
+}
 
-    header {
-      color: white;
-      text-align: center;
-      padding: 70px 20px;
-      background:
-        linear-gradient(
-          135deg,
-          rgba(4, 30, 66, 0.96),
-          rgba(0, 139, 149, 0.92)
-        );
-    }
+header p{
+margin-top:10px;
+font-size:18px;
+}
 
-    header .label {
-      display: inline-block;
-      padding: 6px 14px;
-      margin-bottom: 16px;
-      border: 1px solid rgba(255,255,255,.4);
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: bold;
-    }
+main{
+max-width:1000px;
+margin:auto;
+padding:30px 15px;
+}
 
-    header h1 {
-      max-width: 850px;
-      margin: 0 auto 12px;
-      font-size: clamp(28px, 6vw, 48px);
-      line-height: 1.25;
-    }
+.card{
+background:white;
+border-radius:15px;
+padding:25px;
+margin-bottom:25px;
+box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
 
-    header p {
-      margin: 0;
-      opacity: .9;
-    }
+.card h2{
+margin-top:0;
+color:#0b8a94;
+}
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      padding: 14px 10px;
-      text-align: center;
-      background: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,.08);
-    }
+.button{
+display:inline-block;
+margin-top:15px;
+padding:12px 20px;
+background:#0b8a94;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
 
-    nav a {
-      display: inline-block;
-      margin: 4px 10px;
-      color: #087f8c;
-      font-weight: bold;
-      text-decoration: none;
-    }
+.button:hover{
+background:#066f77;
+}
 
-    main {
-      width: min(1000px, calc(100% - 28px));
-      margin: 32px auto 70px;
-    }
+footer{
+background:#003b5c;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+</style>
 
-    section {
-      margin-bottom: 26px;
-      padding: 26px;
-      background: white;
-      border-radius: 18px;
-      box-shadow: 0 5px 20px rgba(18, 38, 63, .08);
-    }
-
-    h2 {
-      margin-top: 0;
-      padding-left: 12px;
-      color: #075f69;
-      border-left: 6px solid #12a8b5;
-    }
-
-    h3 {
-      margin-top: 30px;
-      color: #0b5660;
-    }
-
-    .race-info {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .info-card {
-      padding: 20px;
-      text-align: center;
-      border-radius: 14px;
-      background: #edf8fa;
-    }
-
-    .info-card span {
-      display: block;
-      color: #607080;
-      font-size: 13px;
-    }
-
-    .info-card strong {
-      display: block;
-      margin-top: 5px;
-      color: #075f69;
-      font-size: 22px;
-    }
-
-    .main-result {
-      margin-top: 18px;
-      padding: 26px;
-      color: white;
-      text-align: center;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #075f69, #0da2ad);
-    }
-
-    .main-result span {
-      display: block;
-      font-size: 14px;
-      opacity: .9;
-    }
-
-    .main-result strong {
-      display: block;
-      margin-top: 4px;
-      font-size: clamp(34px, 8vw, 56px);
-      line-height: 1.2;
-    }
-
-    .ranking-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .ranking-card {
-      padding: 20px;
-      text-align: center;
-      border: 1px solid #d8e3e7;
-      border-radius: 14px;
-    }
-
-    .ranking-card span {
-      display: block;
-      color: #687786;
-      font-size: 13px;
-    }
-
-    .ranking-card strong {
-      color: #087f8c;
-      font-size: 27px;
-    }
-
-    .result-table {
-      width: 100%;
-      margin-top: 18px;
-      border-collapse: collapse;
-    }
-
-    .result-table th,
-    .result-table td {
-      padding: 14px 12px;
-      border-bottom: 1px solid #dce5e8;
-    }
-
-    .result-table th {
-      color: white;
-      text-align: left;
-      background: #087f8c;
-    }
-
-    .result-table tr:nth-child(even) {
-      background: #f2f8f9;
-    }
-
-    .result-table td:nth-child(2),
-    .result-table td:nth-child(3) {
-      font-weight: bold;
-    }
-
-    .discipline {
-      margin-top: 18px;
-      padding: 20px;
-      border-left: 6px solid #12a8b5;
-      border-radius: 12px;
-      background: #f4fafb;
-    }
-
-    .discipline h3 {
-      margin-top: 0;
-    }
-
-    .good {
-      border-left-color: #16a34a;
-      background: #f1fbf4;
-    }
-
-    .warning {
-      border-left-color: #f97316;
-      background: #fff7ed;
-    }
-
-    .bad {
-      border-left-color: #dc2626;
-      background: #fff4f4;
-    }
-
-    .point-list {
-      padding-left: 22px;
-    }
-
-    .point-list li {
-      margin-bottom: 10px;
-    }
-
-    .conclusion {
-      padding: 24px;
-      color: white;
-      border-radius: 15px;
-      background: linear-gradient(135deg, #071b33, #087f8c);
-    }
-
-    .back-area {
-      margin-top: 35px;
-      text-align: center;
-    }
-
-    .back-button {
-      display: inline-block;
-      padding: 13px 22px;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 12px;
-      background: #087f8c;
-    }
-
-    footer {
-      padding: 35px 15px;
-      color: white;
-      text-align: center;
-      background: #071b33;
-    }
-
-    @media (max-width: 700px) {
-      .race-info,
-      .ranking-grid {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 20px;
-      }
-
-      .result-table {
-        font-size: 14px;
-      }
-
-      .result-table th,
-      .result-table td {
-        padding: 11px 7px;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="label">RACE REPORT</div>
 
-  <h1>伊勢志摩・里海トライアスロン2026</h1>
+<h1>レース結果</h1>
 
-  <p>
-    志摩トラディスタンス<br>
-    スイム2km・バイク45km・ラン10km
-  </p>
+<p>
+出場した大会をまとめています
+</p>
+
 </header>
-
-<nav>
-  <a href="#result">結果</a>
-  <a href="#review">振り返り</a>
-  <a href="#next">次の課題</a>
-  <a href="index.html">トップへ</a>
-</nav>
 
 <main>
 
-  <section id="result">
-
-    <h2>レース基本情報</h2>
+<div class="card">
 
-    <div class="race-info">
+<h2>🏖 伊勢志摩・里海トライアスロン2026</h2>
 
-      <div class="info-card">
-        <span>開催日</span>
-        <strong>2026年7月5日</strong>
-      </div>
+<p>
+開催日：2026年7月5日
+</p>
 
-      <div class="info-card">
-        <span>開催地</span>
-        <strong>三重県志摩市</strong>
-      </div>
+<p>
+距離：スイム2km・バイク45km・ラン10km
+</p>
 
-      <div class="info-card">
-        <span>ゼッケン</span>
-        <strong>642</strong>
-      </div>
+<p>
+総合タイム：3時間13分37秒
+</p>
 
-    </div>
+<a class="button" href="iseshima2026.html">
+レースレポートを見る
+</a>
 
-    <div class="main-result">
-      <span>総合タイム</span>
-      <strong>3:13:37</strong>
-    </div>
+</div>
 
-    <div class="ranking-grid">
-
-      <div class="ranking-card">
-        <span>総合順位</span>
-        <strong>132位</strong>
-      </div>
+<div class="card">
 
-      <div class="ranking-card">
-        <span>男子順位</span>
-        <strong>120位</strong>
-      </div>
+<h2>🌊 レイクビワトライアスロン2025</h2>
 
-      <div class="ranking-card">
-        <span>M35-39</span>
-        <strong>11位</strong>
-      </div>
+<p>
+開催日：2025年
+</p>
 
-    </div>
+<p>
+距離：スイム1.6km・バイク66km・ラン10km
+</p>
 
-    <h3>セクション別結果</h3>
+<p>
+詳細ページ作成予定
+</p>
 
-    <table class="result-table">
+<a class="button" href="lakebiwa2025.html">
+レースレポートを見る
+</a>
 
-      <thead>
-        <tr>
-          <th>セクション</th>
-          <th>タイム</th>
-          <th>順位</th>
-        </tr>
-      </thead>
+</div>
 
-      <tbody>
+<div class="card">
 
-        <tr>
-          <td>🏊 スイム 2km</td>
-          <td>51:56</td>
-          <td>377位</td>
-        </tr>
+<h2>🏝 愛南トライアスロン2026</h2>
 
-        <tr>
-          <td>🔁 T1</td>
-          <td>6:35</td>
-          <td>328位</td>
-        </tr>
+<p>
+開催日：2026年
+</p>
 
-        <tr>
-          <td>🚴 バイク 45km</td>
-          <td>1:28:03</td>
-          <td>108位</td>
-        </tr>
+<p>
+詳細ページ作成予定
+</p>
 
-        <tr>
-          <td>バイク終了時点</td>
-          <td>2:26:34</td>
-          <td>219位</td>
-        </tr>
+<a class="button" href="ainan2026.html">
+レースレポートを見る
+</a>
 
-        <tr>
-          <td>🔁 T2</td>
-          <td>4:48</td>
-          <td>441位</td>
-        </tr>
+</div>
 
-        <tr>
-          <td>🏃 ラン 10km</td>
-          <td>42:15</td>
-          <td>15位</td>
-        </tr>
+<div style="text-align:center;">
 
-      </tbody>
+<a class="button" href="index.html">
+← トップページへ戻る
+</a>
 
-    </table>
-
-  </section>
-
-  <section id="review">
-
-    <h2>レース振り返り</h2>
-
-    <div class="discipline bad">
-
-      <h3>🏊 スイム</h3>
-
-      <p>
-        2kmを51分56秒、全体377位。
-        今回の最大の失点区間となった。
-      </p>
-
-      <p>
-        スタート直後から後方に位置する形となり、
-        その後のバイクとランで順位を上げても、
-        総合順位を大きく改善するのが難しい展開になった。
-      </p>
-
-      <p>
-        課題は泳力だけでなく、
-        キャッチ、呼吸時の姿勢、左右差、
-        オープンウォーターでの方向確認など。
-        スイムを改善することが、
-        総合タイム短縮への最優先事項だと確認できた。
-      </p>
-
-    </div>
-
-    <div class="discipline warning">
-
-      <h3>🔁 T1</h3>
-
-      <p>
-        T1は6分35秒、全体328位。
-        スイム後の移動や着替え、
-        ヘルメット・ゼッケンの装着などで時間を失った。
-      </p>
-
-      <p>
-        トランジションは体力よりも準備と反復で改善しやすい。
-        装備の配置と動作手順を固定し、
-        レース前に繰り返し練習する必要がある。
-      </p>
-
-    </div>
-
-    <div class="discipline">
-
-      <h3>🚴 バイク</h3>
-
-      <p>
-        45kmを1時間28分03秒、全体108位。
-        スイムの377位から大きく順位を戻すことができた。
-      </p>
-
-      <p>
-        現状では比較的良い区間だが、
-        ODサブ2時間30分を狙うためには、
-        さらに巡航速度を上げる必要がある。
-      </p>
-
-      <p>
-        FTP向上だけでなく、
-        エアロポジションを維持する能力、
-        コーナー後の再加速、
-        登りでの出力管理も改善していきたい。
-      </p>
-
-    </div>
-
-    <div class="discipline bad">
-
-      <h3>🔁 T2</h3>
-
-      <p>
-        T2は4分48秒、全体441位。
-        セクション順位では今回最も低かった。
-      </p>
-
-      <p>
-        バイクを降りてから走り出すまでの順序、
-        シューズや装備の置き場所、
-        補給の扱いなどを見直す必要がある。
-      </p>
-
-      <p>
-        T1とT2を合わせて11分23秒かかっており、
-        目標としている合計5分以内との差は大きい。
-        ここは練習によって大幅に短縮できる余地がある。
-      </p>
-
-    </div>
-
-    <div class="discipline good">
-
-      <h3>🏃 ラン</h3>
-
-      <p>
-        10kmを42分15秒、全体15位。
-        今回のレースで最も高い順位を記録した。
-      </p>
-
-      <p>
-        スイムとバイクを終えた後でも、
-        上位のランニング能力を発揮できたことは大きな強み。
-      </p>
-
-      <p>
-        今後はランの練習量を必要以上に増やさず、
-        現在の走力を維持しながら、
-        スイムとバイクの強化へ時間を配分する。
-      </p>
-
-    </div>
-
-  </section>
-
-  <section id="next">
-
-    <h2>良かった点</h2>
-
-    <ul class="point-list">
-      <li>ラン10kmで全体15位に入った</li>
-      <li>バイクでスイム後の順位を大きく戻せた</li>
-      <li>ペナルティなしで完走できた</li>
-      <li>現在の強みと弱点が明確になった</li>
-    </ul>
-
-    <h2>改善すべき点</h2>
-
-    <ul class="point-list">
-      <li>スイムの基礎泳力とフォーム改善</li>
-      <li>オープンウォーターでの方向確認</li>
-      <li>T1・T2の動作手順を固定する</li>
-      <li>バイクの巡航力とFTPを向上させる</li>
-      <li>ランは強みを維持する</li>
-    </ul>
-
-    <h2>総評</h2>
-
-    <div class="conclusion">
-
-      <p>
-        今回は、ランで高い順位を記録した一方、
-        スイムとトランジションで大きく時間を失ったレースだった。
-      </p>
-
-      <p>
-        逆に考えれば、改善すべき部分は明確。
-        得意なランをさらに増やすよりも、
-        スイム・バイク・トランジションへ練習時間を配分する方が、
-        ODサブ2時間30分への近道になる。
-      </p>
-
-      <p>
-        次戦では、まずスイムとトランジションの改善を実戦で確認したい。
-      </p>
-
-    </div>
-
-  </section>
-
-  <div class="back-area">
-    <a class="back-button" href="index.html">
-      ← トップページへ戻る
-    </a>
-  </div>
+</div>
 
 </main>
 
 <footer>
-  <p>© 2026 薬剤師トライアスリートへの道</p>
+
+© 2026 薬剤師トライアスリートへの道
+
 </footer>
 
 </body>
