@@ -14,3 +14,7 @@ defaults:
       type: posts
     values:
       layout: training-post
+
+
+plugins:
+  - jekyll-sitemap
