@@ -571,7 +571,39 @@ permalink: /index.html
   <main>
 
     <div class="container">
+<section>
 
+  <div class="card" style="text-align:center;background:linear-gradient(135deg,#071b33,#08667d);color:white;">
+
+    <h2 style="color:white;border-left:none;padding-left:0;">
+      🏁 次戦まであと
+    </h2>
+
+    <div id="countdown" style="font-size:48px;font-weight:bold;margin:20px 0;">
+      ...
+    </div>
+
+    <p>
+      第8回 さくらおろち湖トライアスロン大会<br>
+      2026年9月6日（日）
+    </p>
+
+  </div>
+
+</section>
+
+<script>
+const raceDate = new Date("2026-09-06T00:00:00+09:00");
+const today = new Date();
+
+today.setHours(0,0,0,0);
+
+const diff = raceDate - today;
+const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+
+document.getElementById("countdown").textContent =
+  days >= 0 ? `あと ${days} 日` : "レース開催！";
+</script>
       <section id="about">
 
         <h2>
