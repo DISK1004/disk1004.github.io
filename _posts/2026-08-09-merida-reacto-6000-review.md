@@ -3,6 +3,7 @@ layout: training-post
 title: "MERIDA REACTO 6000を1年以上乗った本音レビュー｜トライアスロンで使って分かった「直線番長」の実力"
 date: 2026-08-09 19:29:00 +0900
 category: 機材
+permalink: /gear/merida-reacto-6000/
 description: "MERIDA REACTO 6000をトライアスロンや鈴鹿8時間エンデューロで使ってきた実体験レビュー。平坦巡航、ハンドリング、カスタム、DHバー、ホイール交換、購入後に感じたメリットと不満をまとめます。"
 ---
 
