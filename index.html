@@ -216,6 +216,39 @@ permalink: /index.html
       box-shadow: var(--shadow);
     }
 
+    .next-race-card {
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(
+          135deg,
+          #071b33,
+          #08667d
+        );
+    }
+
+    .next-race-card h2 {
+      color: white;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    #countdown {
+      margin: 20px 0;
+      font-size: clamp(38px, 8vw, 56px);
+      font-weight: bold;
+    }
+
+    .next-race-name {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .next-race-sub {
+      margin: 7px 0 0;
+      color: #dcecf4;
+    }
+
     .intro-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
@@ -391,6 +424,8 @@ permalink: /index.html
     }
 
     .race-card {
+      display: flex;
+      flex-direction: column;
       padding: 23px;
       border: 1px solid var(--border);
       border-radius: 18px;
@@ -398,8 +433,13 @@ permalink: /index.html
       box-shadow: var(--shadow);
     }
 
+    .race-card.featured {
+      border: 2px solid var(--teal);
+    }
+
     .race-date {
       display: inline-block;
+      align-self: flex-start;
       padding: 5px 10px;
       color: var(--blue);
       border-radius: 999px;
@@ -419,6 +459,8 @@ permalink: /index.html
     }
 
     .text-link {
+      display: inline-block;
+      margin-top: auto;
       color: var(--teal);
       font-weight: bold;
       text-decoration: none;
@@ -574,50 +616,25 @@ permalink: /index.html
 
       <section>
 
-        <div
-          class="card"
-          style="
-            text-align:center;
-            background:linear-gradient(135deg,#071b33,#08667d);
-            color:white;
-          "
-        >
+        <div class="card next-race-card">
 
-          <h2
-            style="
-              color:white;
-              border-left:none;
-              padding-left:0;
-            "
-          >
+          <h2>
             🏁 次戦まであと
           </h2>
 
-          <div
-            id="countdown"
-            style="
-              font-size:48px;
-              font-weight:bold;
-              margin:20px 0;
-            "
-          >
+          <div id="countdown">
             ...
           </div>
 
-          <p style="font-size:18px;">
-
+          <p class="next-race-name">
             <strong>
               鈴鹿エンデューロ 2026
             </strong>
+          </p>
 
-            <br>
-
-            8時間エンデューロ
-
-            <br>
-
+          <p class="next-race-sub">
+            8時間エンデューロ<br>
             2026年11月14日（土）
-
           </p>
 
         </div>
@@ -915,7 +932,7 @@ permalink: /index.html
 
         <div class="race-grid">
 
-          <article class="race-card">
+          <article class="race-card featured">
 
             <div class="race-date">
               2026年9月6日
@@ -926,15 +943,16 @@ permalink: /index.html
             </h3>
 
             <p>
-              2026年シーズンのトライアスロンレース。
-              スイムは1000mに短縮して実施。
+              スイムは1000mへ短縮。
+              Garmin記録をもとにレースを振り返り、
+              出雲・境港・鳥取を巡った3日間の遠征も記録しました。
             </p>
 
             <a
               class="text-link"
-              href="{{ '/races.html' | relative_url }}"
+              href="{{ '/sakura-orochi2026.html' | relative_url }}"
             >
-              レース結果を見る →
+              レース＆遠征記を見る →
             </a>
 
           </article>
