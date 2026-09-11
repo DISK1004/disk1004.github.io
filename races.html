@@ -34,6 +34,7 @@
   </title>
 
   <style>
+
     :root {
       --navy: #071b33;
       --blue: #08667d;
@@ -44,6 +45,10 @@
       --muted: #687686;
       --border: #dbe5eb;
       --shadow: 0 9px 28px rgba(9, 35, 57, 0.09);
+      --green-bg: #dff5f1;
+      --green-text: #075c62;
+      --gold-bg: #fff7dc;
+      --gold-text: #8a6200;
     }
 
     * {
@@ -206,9 +211,9 @@
       margin-left: 6px;
       margin-bottom: 10px;
       padding: 5px 11px;
-      color: #7a5100;
+      color: var(--green-text);
       border-radius: 999px;
-      background: #fff1bf;
+      background: var(--green-bg);
       font-size: 13px;
       font-weight: bold;
     }
@@ -257,6 +262,42 @@
       color: var(--blue);
       font-size: 22px;
       line-height: 1.35;
+    }
+
+    .split-title {
+      margin: 24px 0 13px;
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .split-item {
+      padding: 15px 10px;
+      text-align: center;
+      border-radius: 13px;
+      background: #edf7f8;
+    }
+
+    .split-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .split-item strong {
+      display: block;
+      margin-top: 4px;
+      color: var(--navy);
+      font-size: 17px;
+    }
+
+    .rank-highlight {
+      color: var(--gold-text) !important;
     }
 
     .note {
@@ -336,6 +377,7 @@
     }
 
     @media (max-width: 760px) {
+
       header {
         padding: 66px 17px;
       }
@@ -346,7 +388,8 @@
         padding-right: 20px;
       }
 
-      .result-grid {
+      .result-grid,
+      .split-grid {
         grid-template-columns: 1fr;
       }
 
@@ -358,8 +401,11 @@
         display: block;
         text-align: center;
       }
+
     }
+
   </style>
+
 </head>
 
 <body>
@@ -408,12 +454,12 @@
 
         <p>
           各大会の開催日、距離、総合タイム、
-          総合順位、年代別順位を掲載しています。
+          総合順位、男女別順位・年代別順位を掲載しています。
         </p>
 
         <p>
-          公式リザルト公開前の大会については、
-          Garminの記録を暫定値として掲載しています。
+          公式リザルトが確認できる大会については、
+          公式記録を掲載しています。
         </p>
 
       </section>
@@ -433,7 +479,7 @@
             </div>
 
             <div class="status">
-              公式リザルト待ち
+              公式リザルト確定
             </div>
 
             <h2>
@@ -442,7 +488,7 @@
             </h2>
 
             <p class="distance">
-              スイム1000mに短縮・バイク約40km・ラン約10km
+              スイム1,000m・バイク40km・ラン10km
             </p>
 
           </div>
@@ -454,7 +500,7 @@
               <div class="result-item">
 
                 <span>
-                  Garmin暫定タイム
+                  総合タイム
                 </span>
 
                 <strong>
@@ -470,7 +516,7 @@
                 </span>
 
                 <strong>
-                  未発表
+                  41位
                 </strong>
 
               </div>
@@ -478,21 +524,80 @@
               <div class="result-item">
 
                 <span>
-                  年代別順位
+                  男子順位
                 </span>
 
                 <strong>
-                  未発表
+                  37位
                 </strong>
 
               </div>
 
             </div>
 
+            <h3 class="split-title">
+              種目別リザルト
+            </h3>
+
+            <div class="split-grid">
+
+              <div class="split-item">
+
+                <span>
+                  Swim 1,000m
+                </span>
+
+                <strong>
+                  22:50
+                </strong>
+
+                <span>
+                  85位
+                </span>
+
+              </div>
+
+              <div class="split-item">
+
+                <span>
+                  Bike Lap
+                </span>
+
+                <strong>
+                  1:22:39
+                </strong>
+
+                <span>
+                  45位
+                </span>
+
+              </div>
+
+              <div class="split-item">
+
+                <span>
+                  Run 10km
+                </span>
+
+                <strong>
+                  44:48
+                </strong>
+
+                <span class="rank-highlight">
+                  12位
+                </span>
+
+              </div>
+
+            </div>
+
             <div class="note">
-              スイムは大会設定で1000mに短縮。
-              Garminでは848m・22:20を記録しました。
-              公式リザルト公開後に正式タイムと順位へ更新します。
+              渇水の影響により、
+              スイムは1,500mから1,000mへ短縮。
+              スイム85位からスタートし、
+              バイク終了時には48位まで順位を上げ、
+              ランは種目別12位。
+              最終的に総合41位、男子37位でフィニッシュしました。
             </div>
 
             <div class="button-area">
