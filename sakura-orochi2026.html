@@ -8,6 +8,21 @@ permalink: /sakura-orochi2026.html
 <html lang="ja">
 
 <head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQT8EEHLBN"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-TQT8EEHLBN');
+  </script>
+
   <meta charset="UTF-8">
 
   <meta
@@ -17,7 +32,7 @@ permalink: /sakura-orochi2026.html
 
   <meta
     name="description"
-    content="2026年9月6日に開催された第8回さくらおろち湖トライアスロン大会のレースレビュー。Garmin暫定記録とともに、出雲大社、水木しげるロード、足立美術館、青山剛昌ふるさと館を巡った3日間の遠征を振り返ります。"
+    content="2026年9月6日に開催された第8回さくらおろち湖トライアスロン大会のレースレビュー。総合2時間30分15秒、総合41位、ラン12位。出雲大社、水木しげるロード、足立美術館、青山剛昌ふるさと館を巡った3日間の遠征も振り返ります。"
   >
 
   <title>
@@ -25,6 +40,7 @@ permalink: /sakura-orochi2026.html
   </title>
 
   <style>
+
     :root {
       --navy: #071b33;
       --blue: #08667d;
@@ -35,6 +51,10 @@ permalink: /sakura-orochi2026.html
       --muted: #667786;
       --border: #dbe5eb;
       --shadow: 0 9px 28px rgba(9, 35, 57, 0.09);
+      --green-bg: #e5f7f2;
+      --green-text: #09685d;
+      --gold-bg: #fff6dc;
+      --gold-text: #806000;
     }
 
     * {
@@ -49,7 +69,10 @@ permalink: /sakura-orochi2026.html
       margin: 0;
       color: var(--text);
       background: var(--light);
-      font-family: Arial, "Noto Sans JP", sans-serif;
+      font-family:
+        Arial,
+        "Noto Sans JP",
+        sans-serif;
       line-height: 1.8;
     }
 
@@ -63,7 +86,10 @@ permalink: /sakura-orochi2026.html
     }
 
     .container {
-      width: min(920px, calc(100% - 28px));
+      width: min(
+        920px,
+        calc(100% - 28px)
+      );
       margin: 0 auto;
     }
 
@@ -162,6 +188,17 @@ permalink: /sakura-orochi2026.html
       background: #eaf6f7;
     }
 
+    .official-badge {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 11px;
+      color: var(--green-text);
+      border-radius: 999px;
+      background: var(--green-bg);
+      font-size: 13px;
+      font-weight: bold;
+    }
+
     .photo {
       overflow: hidden;
       margin: 22px 0;
@@ -251,6 +288,54 @@ permalink: /sakura-orochi2026.html
       font-size: clamp(36px, 8vw, 55px);
     }
 
+    .rank-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+      margin: 22px 0;
+    }
+
+    .rank-item {
+      padding: 17px 12px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #f7fbfc;
+    }
+
+    .rank-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .rank-item strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--blue);
+      font-size: 22px;
+    }
+
+    .rank-item.highlight {
+      background: var(--gold-bg);
+    }
+
+    .rank-item.highlight strong {
+      color: var(--gold-text);
+    }
+
+    .analysis-box {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 14px;
+      background: #f5fafb;
+      border: 1px solid var(--border);
+    }
+
+    .analysis-box strong {
+      color: var(--blue);
+    }
+
     .goal-box {
       padding: 25px;
       color: white;
@@ -323,19 +408,24 @@ permalink: /sakura-orochi2026.html
     }
 
     @media (max-width: 650px) {
+
       header {
         padding: 45px 0;
       }
 
-      .race-summary {
+      .race-summary,
+      .rank-box {
         grid-template-columns: 1fr;
       }
 
       .card {
         padding: 20px;
       }
+
     }
+
   </style>
+
 </head>
 
 <body>
@@ -356,6 +446,7 @@ permalink: /sakura-orochi2026.html
 
       <p class="hero-text">
         2026年9月6日<br>
+        総合2時間30分15秒・総合41位<br>
         レースと島根・鳥取を巡った3日間の遠征記
       </p>
 
@@ -391,6 +482,10 @@ permalink: /sakura-orochi2026.html
 
         <div class="card">
 
+          <div class="official-badge">
+            公式リザルト確定
+          </div>
+
           <h2>
             さくらおろち湖へ
           </h2>
@@ -409,9 +504,16 @@ permalink: /sakura-orochi2026.html
           </p>
 
           <div class="notice">
-            <strong>公式リザルト公開前の暫定版です。</strong><br>
-            現時点ではGarminの記録を掲載しています。
-            公式リザルト公開後に正式タイム・順位を追記予定です。
+            C2は
+            <strong>
+              スイム1,000m・バイク40km・ラン10km
+            </strong>
+            で実施されました。
+            公式結果は
+            <strong>
+              2時間30分15秒・総合41位・男子37位
+            </strong>
+            でした。
           </div>
 
         </div>
@@ -492,9 +594,10 @@ permalink: /sakura-orochi2026.html
           </p>
 
           <p>
-            今回はスイムが
-            <strong>1000mに短縮</strong>
-            されて実施されました。
+            C2は10時スタート。
+            スイムは
+            <strong>1,000m</strong>
+            で実施されました。
           </p>
 
           <figure class="photo">
@@ -528,8 +631,8 @@ permalink: /sakura-orochi2026.html
             </div>
 
             <div class="summary-item">
-              <span>最大目標</span>
-              <strong>OD SUB 2:30</strong>
+              <span>総合結果</span>
+              <strong>41位</strong>
             </div>
 
           </div>
@@ -541,71 +644,15 @@ permalink: /sakura-orochi2026.html
       <section>
 
         <h2>
-          Garmin暫定記録
+          公式リザルト
         </h2>
 
         <div class="card">
 
-          <div class="table-wrap">
-
-            <table>
-
-              <thead>
-                <tr>
-                  <th>区間</th>
-                  <th>距離</th>
-                  <th>タイム</th>
-                  <th>ペース・速度</th>
-                </tr>
-              </thead>
-
-              <tbody>
-
-                <tr>
-                  <td>🏊 Swim</td>
-                  <td>848m</td>
-                  <td>22:20</td>
-                  <td>2:38 /100m</td>
-                </tr>
-
-                <tr>
-                  <td>T1</td>
-                  <td>0.34km</td>
-                  <td>7:03</td>
-                  <td>-</td>
-                </tr>
-
-                <tr>
-                  <td>🚴 Bike</td>
-                  <td>39.22km</td>
-                  <td>1:14:22</td>
-                  <td>31.6km/h</td>
-                </tr>
-
-                <tr>
-                  <td>T2</td>
-                  <td>0.02km</td>
-                  <td>1:37</td>
-                  <td>-</td>
-                </tr>
-
-                <tr>
-                  <td>🏃 Run</td>
-                  <td>10.28km</td>
-                  <td>44:53</td>
-                  <td>4:22/km</td>
-                </tr>
-
-              </tbody>
-
-            </table>
-
-          </div>
-
           <div class="big-time">
 
             <span>
-              Garmin各区間単純合計
+              OFFICIAL FINISH TIME
             </span>
 
             <strong>
@@ -614,15 +661,115 @@ permalink: /sakura-orochi2026.html
 
           </div>
 
-          <p>
-            これはGarminで記録された各区間を単純に合計した暫定値です。
-            公式記録ではありません。
-          </p>
+          <div class="rank-box">
 
-          <p>
-            また、大会のスイム設定距離は1000mでしたが、
-            Garminでは848mと記録されています。
-          </p>
+            <div class="rank-item">
+
+              <span>
+                総合順位
+              </span>
+
+              <strong>
+                41位
+              </strong>
+
+            </div>
+
+            <div class="rank-item">
+
+              <span>
+                男子順位
+              </span>
+
+              <strong>
+                37位
+              </strong>
+
+            </div>
+
+            <div class="rank-item highlight">
+
+              <span>
+                ラン順位
+              </span>
+
+              <strong>
+                12位
+              </strong>
+
+            </div>
+
+          </div>
+
+          <div class="table-wrap">
+
+            <table>
+
+              <thead>
+                <tr>
+                  <th>区間</th>
+                  <th>公式タイム</th>
+                  <th>順位</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>🏊 Swim 1,000m</td>
+                  <td>22:50</td>
+                  <td>85位</td>
+                </tr>
+
+                <tr>
+                  <td>🚴 Bike Lap</td>
+                  <td>1:22:39</td>
+                  <td>45位</td>
+                </tr>
+
+                <tr>
+                  <td>Bike終了時</td>
+                  <td>1:45:28</td>
+                  <td>48位通過</td>
+                </tr>
+
+                <tr>
+                  <td>🏃 Run 10km</td>
+                  <td>44:48</td>
+                  <td>12位</td>
+                </tr>
+
+                <tr>
+                  <td><strong>総合</strong></td>
+                  <td><strong>2:30:15</strong></td>
+                  <td><strong>41位</strong></td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+          <div class="analysis-box">
+
+            <strong>
+              スイム85位 → バイク終了48位 → 総合41位
+            </strong>
+
+            <p>
+              スイムでは大きく出遅れましたが、
+              バイクとランで順位を上げました。
+            </p>
+
+            <p>
+              特にランは
+              <strong>44分48秒・種目別12位</strong>。
+              得意種目のランが、
+              今回も総合順位を押し上げる大きな武器となりました。
+            </p>
+
+          </div>
 
         </div>
 
@@ -637,9 +784,16 @@ permalink: /sakura-orochi2026.html
         <div class="card">
 
           <p>
-            Garminでは
-            <strong>848m・22分20秒・2分38秒/100m</strong>
-            を記録しました。
+            公式記録は
+            <strong>
+              1,000m・22分50秒・85位
+            </strong>
+            でした。
+          </p>
+
+          <p>
+            Garminでは848m・22分20秒と記録されましたが、
+            今回は大会公式の1,000m・22分50秒を正式記録として扱います。
           </p>
 
           <p>
@@ -654,14 +808,14 @@ permalink: /sakura-orochi2026.html
           </p>
 
           <p>
-            今回は大会設定距離とGarminのGPS計測に差があるため、
-            この数字だけで1500mの実力を判断せず、
-            公式リザルト公開後に改めて評価します。
+            それでも種目別85位。
+            総合順位をさらに上げるためには、
+            ここが最大の改善ポイントです。
           </p>
 
           <p>
             OD2時間30分切りに向けて、
-            スイムは引き続き最優先の強化種目です。
+            スイムは引き続き最優先で強化していきます。
           </p>
 
         </div>
@@ -690,25 +844,94 @@ permalink: /sakura-orochi2026.html
           </figure>
 
           <p>
-            Garminでは
-            <strong>39.22km・1時間14分22秒・平均31.6km/h</strong>
-            を記録しました。
+            公式バイクラップは
+            <strong>
+              1時間22分39秒・45位
+            </strong>
+            でした。
           </p>
 
           <p>
-            OD40kmで現在目標としているのは
-            <strong>1時間10〜12分</strong>。
+            バイク終了時点では
+            <strong>
+              1時間45分28秒・48位通過
+            </strong>。
           </p>
 
           <p>
-            目標達成のためには、
-            さらに巡航速度を引き上げる必要があります。
+            Garminのロードサイクリング記録では、
+            実走39.14km・1時間14分14秒・平均31.6km/hでした。
+          </p>
+
+          <div class="table-wrap">
+
+            <table>
+
+              <thead>
+                <tr>
+                  <th>Garmin Bike Data</th>
+                  <th>記録</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>距離</td>
+                  <td>39.14km</td>
+                </tr>
+
+                <tr>
+                  <td>走行時間</td>
+                  <td>1:14:14</td>
+                </tr>
+
+                <tr>
+                  <td>平均速度</td>
+                  <td>31.6km/h</td>
+                </tr>
+
+                <tr>
+                  <td>平均パワー</td>
+                  <td>196W</td>
+                </tr>
+
+                <tr>
+                  <td>Normalized Power</td>
+                  <td>218W</td>
+                </tr>
+
+                <tr>
+                  <td>平均ケイデンス</td>
+                  <td>87rpm</td>
+                </tr>
+
+                <tr>
+                  <td>総上昇量</td>
+                  <td>348m</td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+          <p>
+            アップダウンのあるコースで、
+            GarminではNP218Wを記録しました。
           </p>
 
           <p>
-            FTP向上だけでなく、
-            一定出力を長時間維持する能力、
-            そしてその後のランへ余力を残す走りを強化していきます。
+            今後はFTPそのものを引き上げ、
+            同じレース出力でも余裕を持って走れる状態を目指します。
+          </p>
+
+          <p>
+            OD40kmでの目標は
+            <strong>
+              1時間10〜12分
+            </strong>です。
           </p>
 
         </div>
@@ -737,26 +960,46 @@ permalink: /sakura-orochi2026.html
           </figure>
 
           <p>
-            Garminでは
-            <strong>10.28km・44分53秒・4分22秒/km</strong>
-            を記録しました。
+            公式記録は
+            <strong>
+              10km・44分48秒・種目別12位
+            </strong>
+            でした。
           </p>
 
           <p>
-            ランは自分の得意種目ですが、
-            トライアスロンではラン単体の走力だけではなく、
-            スイムとバイクを終えた状態で
-            どれだけ走力を残せるかが重要です。
+            今回の3種目の中で、
+            最も順位が高かったのがランです。
+          </p>
+
+          <p>
+            スイム85位、
+            バイク45位に対して、
+            ランは12位。
+          </p>
+
+          <p>
+            得意種目として、
+            レース後半で順位を上げることができました。
           </p>
 
           <p>
             ODでの目標は
-            <strong>10km 39〜40分</strong>。
+            <strong>
+              10km 39〜40分
+            </strong>。
           </p>
 
           <p>
-            ランは能力維持を中心とし、
-            今後も練習時間はスイムとバイクへ重点的に配分します。
+            ただし、
+            現状ではランよりもスイムとバイクに
+            大きな改善余地があります。
+          </p>
+
+          <p>
+            今後もランは週3回程度を基本とし、
+            能力を維持しながら、
+            練習時間をスイムとバイクへ優先的に配分していきます。
           </p>
 
         </div>
@@ -766,31 +1009,87 @@ permalink: /sakura-orochi2026.html
       <section>
 
         <h2>
-          トランジション
+          Garminで見るトランジション
         </h2>
 
         <div class="card">
 
           <p>
-            Garminでは、
-            T1が<strong>7分03秒</strong>、
-            T2が<strong>1分37秒</strong>でした。
+            Garminのマルチスポーツ記録では、
+            T1が
+            <strong>7分03秒</strong>、
+            T2が
+            <strong>1分37秒</strong>
+            でした。
           </p>
 
           <p>
-            合計は
+            Garmin上の合計は
             <strong>8分40秒</strong>。
           </p>
 
           <p>
-            現在のODでの目標は
-            トランジション合計<strong>5分以内</strong>です。
+            ただし、
+            公式リザルトではT1・T2が独立した項目として
+            掲載されていないため、
+            これはGarmin上の参考値として扱います。
           </p>
 
           <p>
-            ただしGarminの区間と大会公式の計測区間が
-            完全に一致するとは限らないため、
-            公式リザルト公開後に改めて確認します。
+            ODでの目標は
+            トランジション合計
+            <strong>5分以内</strong>
+            です。
+          </p>
+
+        </div>
+
+      </section>
+
+      <section>
+
+        <h2>
+          今回のレースを振り返って
+        </h2>
+
+        <div class="card">
+
+          <p>
+            最終結果は
+            <strong>
+              2時間30分15秒・総合41位・男子37位
+            </strong>
+            でした。
+          </p>
+
+          <p>
+            数字だけを見ると2時間30分に非常に近い結果ですが、
+            今回はスイムが1,000mだったため、
+            通常のオリンピックディスタンスでの
+            2時間30分切り達成とはなりません。
+          </p>
+
+          <p>
+            一方で、
+            今回の種目別順位を見ると、
+            今後取り組むべきことは非常に明確になりました。
+          </p>
+
+          <p>
+            <strong>
+              Swim：85位<br>
+              Bike：45位<br>
+              Run：12位
+            </strong>
+          </p>
+
+          <p>
+            ランはすでに大きな武器になっています。
+          </p>
+
+          <p>
+            これから総合タイムと順位を大きく伸ばすには、
+            スイムの底上げとバイク強化が必要です。
           </p>
 
         </div>
@@ -832,204 +1131,4 @@ permalink: /sakura-orochi2026.html
 
             <img
               src="{{ '/20260906_171702.jpg' | relative_url }}"
-              alt="水木しげるロードのねずみ男ベンチ"
-            >
-
-            <figcaption>
-              ねずみ男のベンチ
-            </figcaption>
-
-          </figure>
-
-          <p>
-            トライアスロン遠征では、
-            大会だけでなく、
-            普段なかなか訪れない土地を巡れることも楽しみの一つです。
-          </p>
-
-        </div>
-
-      </section>
-
-      <section>
-
-        <h2>
-          9月7日｜足立美術館
-        </h2>
-
-        <div class="card">
-
-          <p>
-            レース翌日は足立美術館へ。
-          </p>
-
-          <figure class="photo">
-
-            <img
-              src="{{ '/20260907_113205.jpg' | relative_url }}"
-              alt="足立美術館の日本庭園"
-            >
-
-            <figcaption>
-              足立美術館の日本庭園
-            </figcaption>
-
-          </figure>
-
-          <p>
-            前日のトライアスロンとはまったく違った雰囲気の中、
-            日本庭園を眺めながら過ごしました。
-          </p>
-
-        </div>
-
-      </section>
-
-      <section>
-
-        <h2>
-          青山剛昌ふるさと館へ
-        </h2>
-
-        <div class="card">
-
-          <p>
-            今回の遠征最後の目的地は、
-            青山剛昌ふるさと館。
-          </p>
-
-          <figure class="photo">
-
-            <img
-              src="{{ '/20260907_132841.jpg' | relative_url }}"
-              alt="青山剛昌ふるさと館周辺の名探偵コナン像"
-            >
-
-            <figcaption>
-              青山剛昌ふるさと館周辺
-            </figcaption>
-
-          </figure>
-
-          <p>
-            出雲から始まり、
-            さくらおろち湖、境港、足立美術館、
-            そして青山剛昌ふるさと館まで。
-          </p>
-
-          <p>
-            トライアスロンと観光の両方を楽しんだ
-            3日間の遠征となりました。
-          </p>
-
-        </div>
-
-      </section>
-
-      <section>
-
-        <div class="goal-box">
-
-          <h2>
-            ODサブ2時間30分へ
-          </h2>
-
-          <p>
-            今回はスイムが1000mに短縮されたため、
-            通常のオリンピックディスタンスとの
-            単純比較はできません。
-          </p>
-
-          <p>
-            それでも、
-            Garminの記録から現在地を確認することができました。
-          </p>
-
-          <p>
-            今後の優先順位は変わりません。
-          </p>
-
-          <p>
-            <strong>
-              ① スイム強化<br>
-              ② バイク強化<br>
-              ③ ラン能力の維持
-            </strong>
-          </p>
-
-          <p>
-            現在の目標は、
-          </p>
-
-          <p>
-            Swim 1500m：33〜35分<br>
-            Bike 40km：1時間10〜12分<br>
-            Run 10km：39〜40分<br>
-            Transition：合計5分以内<br>
-            FTP：240W → 250W
-          </p>
-
-          <p>
-            最大の目標は、
-            <strong>オリンピックディスタンス2時間30分切り</strong>。
-          </p>
-
-          <p>
-            公式リザルト公開後には、
-            正式タイム・順位・各パート順位を追加し、
-            OD換算も含めて改めて分析します。
-          </p>
-
-        </div>
-
-      </section>
-
-      <section>
-
-        <div class="next-race">
-
-          <span>
-            NEXT RACE
-          </span>
-
-          <strong>
-            鈴鹿エンデューロ 2026
-          </strong>
-
-          <p>
-            8時間エンデューロ<br>
-            2026年11月14日
-          </p>
-
-          <p>
-            次は鈴鹿サーキット。<br>
-            ODサブ2時間30分へ向けて、
-            バイク能力をさらに引き上げます。
-          </p>
-
-          <a
-            class="back-button"
-            href="{{ '/races.html' | relative_url }}"
-          >
-            出場大会一覧へ
-          </a>
-
-        </div>
-
-      </section>
-
-    </div>
-
-  </main>
-
-  <footer>
-
-    <p>
-      © 2026 薬剤師トライアスリートへの道
-    </p>
-
-  </footer>
-
-</body>
-
-</html>
+              alt="水木しげ
